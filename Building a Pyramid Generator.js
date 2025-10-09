@@ -1,3 +1,5 @@
+// Steps 118 only on https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8
+
 const character = "!";
 const count = 10;
 const rows = [];
