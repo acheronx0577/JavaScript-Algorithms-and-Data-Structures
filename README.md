@@ -48,7 +48,7 @@ Through this certification, I learned:
 
 # Clone the repository
 ```
-git clone git@github.com:yourusername/javascript-algorithms-data-structures.git
+git clone git@github.com:acheronx0577/JavaScript-Algorithms-and-Data-Structures.git
 ```
 # Open any project folder
 ```
