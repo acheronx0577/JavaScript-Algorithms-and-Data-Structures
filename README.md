@@ -26,7 +26,7 @@ Through this certification, I learned:
 | 🧱 Course Project | 💡 Description | 🌐 Live Demo | 📊 Status |
 |------------------|----------------|---------------|------------|
 | 🏛️ **Introductory JavaScript** | Build a Pyramid Generator | [▶️ Link](<https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/blob/main/Building%20a%20Pyramid%20Generator.js>) | ✅ Completed |
-| 🧮 **Gradebook App** | Review JS fundamentals and averages | [▶️ Link](<YOUR_GRADEBOOK_LINK>) | ✅ Completed |
+| 🧮 **Gradebook App** | Review JS fundamentals and averages | [▶️ Link](<https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/blob/main/Building%20a%20Gradebook%20App.js>) | ✅ Completed |
 | ⚔️ **Role Playing Game** | Learn basic JavaScript by building a small RPG | [▶️ Demo](https://acheronx0577.github.io/JavaScript-Role-Play-Game) | ✅ Completed |
 | 🎨 **Random Background Color Changer** | Debugging practice & randomization | [▶️ Demo](<YOUR_COLOR_CHANGER_LINK>) | ⏳ Not started |
 | 🍎 **Calorie Counter** | Form validation and DOM updates | [▶️ Demo](<YOUR_CALORIE_COUNTER_LINK>) | ⏳ Not started |
