@@ -46,14 +46,16 @@ Through this certification, I learned:
 
 ## 💡 How to Run Locally
 
-```bash
 # Clone the repository
+```
 git clone git@github.com:yourusername/javascript-algorithms-data-structures.git
-
+```
 # Open any project folder
-cd project-folder-name
-
+```
+cd JavaScript-Algorithms-and-Data-Structures
+```
 # Run in your browser
+```
 open index.html
 ```
 
