@@ -25,14 +25,17 @@ Through this certification, I learned:
 
 | 🧱 Course Project | 💡 Description | 🌐 Live Demo | 📊 Status |
 |------------------|----------------|---------------|------------|
-| 🏛️ **Introductory JavaScript** | Build a Pyramid Generator | <a href="https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/blob/main/Building%20a%20Pyramid%20Generator.js" target="_blank">▶️ Link</a> | ✅ Completed |
-| 🧮 **Gradebook App** | Review JS fundamentals and averages | <a href="https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/blob/main/Building%20a%20Gradebook%20App.js" target="_blank">▶️ Link</a> | ✅ Completed |
-| ⚔️ **Role Playing Game** | Learn basic JavaScript by building a small RPG | <a href="https://acheronx0577.github.io/JavaScript-Role-Play-Game" target="_blank">▶️ Demo</a> | ✅ Completed |
-| 🎨 **Random Background Color Changer** | Debugging practice & randomization | <a href="https://acheronx0577.github.io/JavaScript-Random-Background-Color-Changer" target="_blank">▶️ Demo</a> | ✅ Completed |
-| 🍎 **Calorie Counter** | Form validation and DOM updates | <a href="<YOUR_CALORIE_COUNTER_LINK>" target="_blank">▶️ Demo</a> | ⏳ Not started |
-| ✊ **Rock, Paper, Scissors Game** | DOM manipulation and game logic | <a href="<YOUR_RPS_LINK>" target="_blank">▶️ Demo</a> | 🟡 50% Completed |
-| 🎵 **Music Player** | String & array methods in action | <a href="<YOUR_MUSIC_PLAYER_LINK>" target="_blank">▶️ Demo</a> | ⏳ Not started |
-| 🔁 **Palindrome Checker (Certification Project)** | Final JS project — check if a word is a palindrome | <a href="<YOUR_PALINDROME_LINK>" target="_blank">▶️ Demo</a> | ✅ Completed |
+| 🏛️ [**Introductory JavaScript**](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Pyramid%20Generator.js) | Build a Pyramid Generator | ▶️ Link | ✅ Completed |
+| 🧮 [**Gradebook App**](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Gradebook%20App.js) | Review JS fundamentals and averages | ▶️ Link | ✅ Completed |
+| ⚔️ [**Role Playing Game**](https://github.com/acheronx0577/JavaScript-Role-Play-Game) | Learn basic JavaScript by building a small RPG | [▶️ Demo](https://acheronx0577.github.io/JavaScript-Role-Play-Game) | ✅ Completed |
+| 🎨 [**Random Background Color Changer**](https://github.com/acheronx0577/JavaScript-Random-Background-Color-Changer) | Debugging practice & randomization | [▶️ Demo](https://acheronx0577.github.io/JavaScript-Random-Background-Color-Changer) | ✅ Completed |
+| 🍎 [**Calorie Counter**](https://github.com/acheronx0577/JavaScript-Calorie-Counter) | Form validation and DOM updates | ▶️ Demo | ⏳ Not started |
+| ✊ [**Rock, Paper, Scissors Game**](https://github.com/acheronx0577/JavaScript-Rock-Paper-Scissors) | DOM manipulation and game logic | ▶️ Demo | 🟡 50% Completed |
+| 🎵 [**Music Player**](https://github.com/acheronx0577/JavaScript-Music-Player) | String & array methods in action | ▶️ Demo | ⏳ Not started |
+| 🔁 [**Palindrome Checker (Certification Project)**](https://github.com/acheronx0577/JavaScript-Palindrome-Checker) | Final JS project — check if a word is a palindrome | ▶️ Demo | ✅ Completed |
+
+---
+
 
 ---
 
