@@ -95,4 +95,19 @@ open index.html
 ⭐ Continuing toward full certification!
 
 ---
-⭐ **If you enjoy these projects, give the repo a star!** ⭐
+
+## 💡 Contribute
+
+Want to improve this project?  
+- Fork the repo 🍴  
+- Make your changes ✍️  
+- Submit a Pull Request ✅  
+
+---
+
+## 📜 License
+
+This project is open-source under the **MIT License**.
+
+---
+⭐ **If you like this project, give it a star on GitHub!** ⭐
