@@ -77,13 +77,4 @@ open index.html
 ⭐ Continuing toward full certification!
 
 ---
-
-## 👨‍💻 Author
-
-**Your Name**  
-💬 Open for collaboration & feedback  
-📫 [your.email@example.com](mailto:your.email@example.com)
-
----
-
 ⭐ **If you enjoy these projects, give the repo a star!** ⭐
