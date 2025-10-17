@@ -5,6 +5,14 @@ Each project builds on core JavaScript concepts — from variables and loops to 
 
 ---
 
+## 🎓 Certification
+
+🔗 **Course Link:** [JavaScript Algorithms and Data Structures - freeCodeCamp](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8)
+
+This project was completed as part of the freeCodeCamp certification requirements to demonstrate proficiency in JavaScript fundamentals, algorithms, and data structures.
+
+---
+
 ## 🧩 About This Course
 
 🎓 **Start learning here:** [freeCodeCamp – JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8)
