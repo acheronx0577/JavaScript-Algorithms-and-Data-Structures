@@ -73,9 +73,6 @@ Through this course, I learned:
 
 ---
 
-
----
-
 ## 🧰 Tech Stack
 
 - 🟨 JavaScript (ES6+)
