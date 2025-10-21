@@ -56,7 +56,6 @@ Through this course, I learned:
 | ✊ [**Rock, Paper, Scissors Game**](https://github.com/acheronx0577/JavaScript-Building-a-Rock-Paper-Scissors-Game) | DOM manipulation and game logic | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Rock-Paper-Scissors-Game) | ✅ Completed |
 | 🎵 [**Music Player**](https://github.com/acheronx0577/JavaScript-Building-a-Music-Player) | String & array methods in action | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Music-Player) | ✅ Completed |
 | 🔁 [**Palindrome Checker (Certification Project)**](https://github.com/acheronx0577/JavaScript-Palindrome-Checker) | Final JS project — check if a word is a palindrome | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Palindrome-Checker) | ✅ Completed |
-| 🔁 [**Palindrome Checker (Certification Project)**](https://github.com/acheronx0577/JavaScript-Palindrome-Checker) | Final JS project — check if a word is a palindrome | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Palindrome-Checker) | ✅ Completed |
 
 ---
 
