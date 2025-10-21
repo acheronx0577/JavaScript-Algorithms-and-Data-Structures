@@ -46,7 +46,7 @@ Through this course, I learned:
 
 ## 🕹️ Project Showcase & Live Demos
 
-| 🧱 Course Project Part 1 | 💡 Description | 🌐 Live Demo | 📊 Status |
+| 🧱 Course Project Part 1 | 💡 Description | 🌐 Live | 📊 Status |
 |------------------|----------------|---------------|------------|
 | 🏛️ [**Introductory JavaScript**](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Pyramid%20Generator.js) | Build a Pyramid Generator | ▶️ [Link](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Pyramid%20Generator.js) | ✅ Completed |
 | 🧮 [**Gradebook App**](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Gradebook%20App.js) | Review JS fundamentals and averages | ▶️ [Link](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Gradebook%20App.js) | ✅ Completed |
@@ -59,7 +59,7 @@ Through this course, I learned:
 
 ---
 
-| 🧱 Course Project Part 2 | 💡 Description | 🌐 Live Demo | 📊 Status |
+| 🧱 Course Project Part 2 | 💡 Description | 🌐 Live | 📊 Status |
 |------------------|----------------|---------------|------------|
 | 📅 [**Date Formatter**](https://github.com/acheronx0577/JavaScript-Date-Formatter) | Learn the Date Object by Building a Date Formatter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Date-Formatter) | Not Complete |
 | ⚽ [**Football Team Cards**](https://github.com/acheronx0577/JavaScript-Football-Team-Cards) | Learn Modern JavaScript Methods by Building Football Team Cards | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Football-Team-Cards) | Not Complete |
