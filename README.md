@@ -61,7 +61,7 @@ Through this course, I learned:
 
 | 🧱 Course Project Part 2 | 💡 Description | 🌐 Live | 📊 Status |
 |------------------|----------------|---------------|------------|
-| 📅 [**Date Formatter**](https://github.com/acheronx0577/JavaScript-Date-Formatter) | Learn the Date Object by Building a Date Formatter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Date-Formatter) | Not Complete |
+| 📅 [**Date Formatter**](https://github.com/acheronx0577/JavaScript-Building-a-Date-Formatter) | Learn the Date Object by Building a Date Formatter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Date-Formatter) | ✅ Completed |
 | ⚽ [**Football Team Cards**](https://github.com/acheronx0577/JavaScript-Football-Team-Cards) | Learn Modern JavaScript Methods by Building Football Team Cards | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Football-Team-Cards) | Not Complete |
 | ✅ [**Todo App**](https://github.com/acheronx0577/JavaScript-Todo-App) | Learn localStorage by Building a Todo App | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Todo-App) | Not Complete |
 | 🔢 [**Decimal to Binary Converter**](https://github.com/acheronx0577/JavaScript-Decimal-to-Binary-Converter) | Learn Recursion by Building a Decimal to Binary Converter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Decimal-to-Binary-Converter) | Not Complete |
