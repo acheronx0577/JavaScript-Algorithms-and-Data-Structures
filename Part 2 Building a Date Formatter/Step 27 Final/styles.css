@@ -1,0 +1,234 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-grey: #0a0a23;
+    --white: #ffffff;
+    --yellow: #f1be32;
+    --light-yellow: #f8e169;
+    --light-grey: #2a2a40;
+    --medium-grey: #1b1b32;
+    --blue: #3a86ff;
+    --green: #4cc9f0;
+    --purple: #8338ec;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    --transition: all 0.3s ease;
+}
+
+body {
+    color: var(--white);
+    background-color: var(--dark-grey);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--dark-grey) 0%, var(--medium-grey) 100%);
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.card {
+    background-color: var(--light-grey);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+    padding: 30px 30px 10px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-container i {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.divider {
+    height: 4px;
+    background: linear-gradient(to right, var(--blue), var(--purple), var(--green));
+}
+
+.content {
+    padding: 30px;
+}
+
+.dropdown-container {
+    margin-bottom: 30px;
+}
+
+.dropdown-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--green);
+    font-size: 1.1rem;
+}
+
+.dropdown-label i {
+    margin-right: 8px;
+}
+
+.date-select {
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--medium-grey);
+    border: 2px solid var(--blue);
+    color: var(--white);
+    appearance: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: var(--transition);
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+}
+
+.date-select:focus {
+    outline: none;
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(76, 201, 240, 0.3);
+}
+
+.date-display-container {
+    margin-top: 20px;
+}
+
+.date-card {
+    background-color: var(--medium-grey);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--green);
+}
+
+.date-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: var(--green);
+    font-weight: 600;
+}
+
+.formatted-date {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 700;
+    color: var(--yellow);
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgba(10, 10, 35, 0.3);
+    border-radius: 8px;
+}
+
+.date-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #aaa;
+    justify-content: center;
+}
+
+.footer {
+    padding: 15px 30px;
+    text-align: center;
+    background-color: var(--medium-grey);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.highlight {
+    animation: highlight 0.5s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .formatted-date {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .title-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .formatted-date {
+        font-size: 1.3rem;
+    }
+
+    .header {
+        padding: 20px 20px 10px;
+    }
+}

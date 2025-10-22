@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn the Date Object by Building a Date Formatter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="card">
+          <div class="header">
+            <div class="title-container">
+              <h1 class="title">Date Formatter</h1>
+              <div class="icon-container">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+            </div>
+            <p class="subtitle">Select a format to display the current date</p>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="content">
+            <div class="dropdown-container">
+              <label for="date-options" class="dropdown-label">
+                <i class="fas fa-cog"></i> Date Format
+              </label>
+              <select name="date-options" id="date-options" class="date-select">
+                <option value="dd-mm-yyyy">Day, Month, Year</option>
+                <option value="yyyy-mm-dd">Year, Month, Day</option>
+                <option value="mm-dd-yyyy-h-mm">Month, Day, Year, Hours, Minutes</option>
+                <option value="full-date">Full Date with Day Name</option>
+                <option value="relative">Relative Time</option>
+              </select>
+            </div>
+
+            <div class="date-display-container">
+              <div class="date-card">
+                <div class="date-header">
+                  <i class="far fa-clock"></i>
+                  <span>Current Date & Time</span>
+                </div>
+                <p id="current-date" class="formatted-date"></p>
+                <div class="date-footer">
+                  <i class="fas fa-sync-alt"></i>
+                  <span>Updates automatically</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer">
+            <p>Built with JavaScript Date Object</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
