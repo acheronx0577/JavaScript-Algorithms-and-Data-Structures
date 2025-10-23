@@ -4,6 +4,7 @@ const worldCupYear = document.getElementById("year");
 const headCoach = document.getElementById("head-coach");
 const playerCards = document.getElementById("player-cards");
 const playersDropdownList = document.getElementById("players");
+
 const myFavoriteFootballTeam = {
   team: "Argentina",
   sport: "Football",
@@ -28,7 +29,7 @@ const myFavoriteFootballTeam = {
       isCaptain: false,
       nickname: null,
     },
-     {
+    {
       name: "Ricardo Bochini",
       position: "midfielder",
       number: 3,
@@ -168,6 +169,21 @@ const myFavoriteFootballTeam = {
       isCaptain: false,
       nickname: null,
     },
+    // NEW PLAYERS ADDED
+    {
+      name: "Gabriel Calderón",
+      position: "midfielder",
+      number: 23,
+      isCaptain: false,
+      nickname: "El Gaby",
+    },
+    {
+      name: "Roberto Mouzo",
+      position: "defender", 
+      number: 24,
+      isCaptain: false,
+      nickname: "El Negro",
+    }
   ],
 };
 
@@ -180,21 +196,30 @@ teamName.textContent = team;
 worldCupYear.textContent = year;
 headCoach.textContent = coachName;
 
+// In the setPlayerCards function, replace this part:
 const setPlayerCards = (arr = players) => {
-  playerCards.innerHTML += arr
+  playerCards.innerHTML = arr
     .map(
       ({ name, position, number, isCaptain, nickname }) => {
+        const captainClass = isCaptain ? "captain" : "";
+        const displayNickname = nickname || "No nickname";
+        const nicknameClass = nickname ? "has-nickname" : "no-nickname";
+        
         return `
-        <div class="player-card">
+        <div class="player-card ${captainClass}" data-number="${number}">
           <h2>${isCaptain ? "(Captain)" : ""} ${name}</h2>
           <p>Position: ${position}</p>
           <p>Number: ${number}</p>
-          <p>Nickname: ${nickname !== null ? nickname : "N/A"}</p>
+          <p class="nickname-info">Nickname: <span class="nickname ${nicknameClass}">${displayNickname}</span></p>
         </div>
-      ` }
+      `;
+      }
     )
     .join("");
 };
+
+// Initialize with all players
+setPlayerCards();
 
 playersDropdownList.addEventListener("change", (e) => {
   playerCards.innerHTML = "";
@@ -221,9 +246,8 @@ playersDropdownList.addEventListener("change", (e) => {
         players.filter((player) => player.position === "goalkeeper")
       );
       break;
-
-default: 
-  setPlayerCards();
-
+    default:
+      setPlayerCards();
   }
 });
+
