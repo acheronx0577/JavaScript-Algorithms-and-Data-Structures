@@ -62,7 +62,7 @@ Through this course, I learned:
 | 🧱 Course Project Part 2 | 💡 Description | 🌐 Live | 📊 Status |
 |------------------|----------------|---------------|------------|
 | 📅 [**Date Formatter**](https://github.com/acheronx0577/JavaScript-Building-a-Date-Formatter) | Learn the Date Object by Building a Date Formatter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Date-Formatter) | ✅ Completed |
-| ⚽ [**Football Team Cards**](https://github.com/acheronx0577/JavaScript-Football-Team-Cards) | Learn Modern JavaScript Methods by Building Football Team Cards | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Football-Team-Cards) | Not Complete |
+| ⚽ [**Football Team Cards**](https://github.com/acheronx0577/JavaScript-Building-Football-Team-Cards) | Learn Modern JavaScript Methods by Building Football Team Cards | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-Football-Team-Cards) | ✅ Completed |
 | ✅ [**Todo App**](https://github.com/acheronx0577/JavaScript-Todo-App) | Learn localStorage by Building a Todo App | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Todo-App) | Not Complete |
 | 🔢 [**Decimal to Binary Converter**](https://github.com/acheronx0577/JavaScript-Decimal-to-Binary-Converter) | Learn Recursion by Building a Decimal to Binary Converter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Decimal-to-Binary-Converter) | Not Complete |
 | 🏛️ [**Roman Numeral Converter**](https://github.com/acheronx0577/JavaScript-Roman-Numeral-Converter) | **Certification Project**: Convert integers to Roman numerals | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Roman-Numeral-Converter) | Not Complete |
