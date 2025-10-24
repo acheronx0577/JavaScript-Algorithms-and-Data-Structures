@@ -1,45 +1,372 @@
+:root {
+    --primary-color: #2a8c4a;
+    --secondary-color: #3daa5f;
+    --accent-color: #ffc145;
+    --danger-color: #ff4444;
+    --dark-bg: #0f0f2d;
+    --light-text: #ffffff;
+    --dark-text: #333;
+    --panel-bg: rgba(20, 20, 60, 0.85);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-    background-color: #0a0a23;
+    background-color: var(--dark-bg);
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(40, 80, 120, 0.8) 0%, transparent 25%),
+        radial-gradient(circle at 90% 80%, rgba(60, 160, 100, 0.6) 0%, transparent 25%);
+    color: var(--light-text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-#text {
-    background-color: #0a0a23;
-    color: #ffffff;
-    padding: 10px;
+.game-container {
+    max-width: 800px;
+    width: 100%;
+    background: var(--panel-bg);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
 }
 
-#game {
-    max-width: 500px;
-    max-height: 400px;
-    background-color: #ffffff;
-    color: #ffffff;
-    margin: 30px auto 0px;
-    padding: 10px;
+.game-header {
+    text-align: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--accent-color);
 }
 
-#controls,
-#stats {
-    border: 1px solid #0a0a23;
-    padding: 5px;
-    color: #0a0a23;
+.game-header h1 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 8px;
 }
 
-#monsterStats {
+.game-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.stats-panel {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(42, 140, 74, 0.9);
+    border-radius: var(--border-radius);
+    padding: 16px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 193, 69, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1rem;
+}
+
+.stat-icon {
+    font-size: 1.3rem;
+}
+
+.stat-label {
+    opacity: 0.9;
+}
+
+.stat-value {
+    font-weight: bold;
+    color: var(--accent-color);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.inventory-panel {
+    background: rgba(61, 170, 95, 0.8);
+    border-radius: var(--border-radius);
+    padding: 16px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 193, 69, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.inventory-panel h3 {
+    margin-bottom: 12px;
+    color: var(--accent-color);
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.inventory-items {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.inventory-item {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 193, 69, 0.4);
+    font-size: 0.9rem;
+    transition: var(--transition);
+    backdrop-filter: blur(5px);
+}
+
+.inventory-item.active {
+    background: var(--accent-color);
+    color: var(--dark-text);
+    font-weight: bold;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 193, 69, 0.4);
+}
+
+.game-content {
+    background: rgba(30, 30, 70, 0.7);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.game-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    min-height: 120px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--accent-color);
+    backdrop-filter: blur(5px);
+}
+
+.monster-stats {
+    background: rgba(255, 68, 68, 0.9);
+    border-radius: var(--border-radius);
+    padding: 16px;
+    margin: 20px 0;
+    border: 1px solid rgba(255, 255, 255, 0.25);
     display: none;
-    border: 1px solid #0a0a23;
-    padding: 5px;
-    color: #ffffff;
-    background-color: #c70d0d;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
 }
 
-.stat {
-    padding-right: 10px;
+.monster-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-button {
+.health-bar-container {
+    position: relative;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 8px 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.health-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #6fcf72, #27ae60);
+    border-radius: 12px;
+    transition: width 0.5s ease;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.monster-stats .health-bar {
+    background: linear-gradient(90deg, #ff7b7b, #ff4444);
+}
+
+.health-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.player-health {
+    margin: 16px 0;
+}
+
+.controls-panel {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.game-btn {
+    padding: 14px 28px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: bold;
     cursor: pointer;
-    color: #0a0a23;
-    background-color: #feac32;
-    background-image: linear-gradient(#fecc4c, #ffac33);
-    border: 3px solid #feac32;
+    transition: var(--transition);
+    min-width: 160px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.game-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+    filter: brightness(1.1);
+}
+
+.game-btn:active {
+    transform: translateY(0);
+}
+
+.game-btn.primary {
+    background: linear-gradient(135deg, var(--accent-color), #ffaa00);
+    color: var(--dark-text);
+}
+
+.game-btn.secondary {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: var(--light-text);
+}
+
+.game-btn.danger {
+    background: linear-gradient(135deg, var(--danger-color), #ff6b6b);
+    color: var(--light-text);
+}
+
+.game-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.location-indicator {
+    text-align: center;
+    padding: 12px;
+    background: rgba(255, 193, 69, 0.15);
+    border-radius: var(--border-radius);
+    font-style: italic;
+    border: 1px solid rgba(255, 193, 69, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.game-text,
+.controls-panel {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 16px;
+    }
+
+    .stats-panel {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .controls-panel {
+        flex-direction: column;
+    }
+
+    .game-btn {
+        width: 100%;
+    }
+
+    .game-header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Combat effects */
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+.combat-shake {
+    animation: shake 0.3s ease;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.damage-pulse {
+    animation: pulse 0.3s ease;
+}
+
+/* Healing effect */
+@keyframes healGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 5px rgba(111, 207, 114, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(111, 207, 114, 0.8);
+    }
+}
+
+.heal-glow {
+    animation: healGlow 0.8s ease;
 }

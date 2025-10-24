@@ -1,66 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>RPG - Dragon Repeller</title>
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Dragon Repeller</h1>
+            <p class="game-subtitle">Defeat the dragon and save the town!</p>
+        </header>
 
-  </head>
-  <body>
+        <div class="stats-panel">
+            <div class="stat-item">
+                <span class="stat-icon">⚡</span>
+                <span class="stat-label">XP:</span>
+                <span id="xpText" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-icon">❤️</span>
+                <span class="stat-label">Health:</span>
+                <span id="healthText" class="stat-value">100</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-icon">💰</span>
+                <span class="stat-label">Gold:</span>
+                <span id="goldText" class="stat-value">50</span>
+            </div>
+        </div>
 
-    <div id="game">
-      <div id="stats">
-        <span class="stat">
-          XP: 
-          <strong>
-            <span id="xpText">0</span>
-          </strong>
-        </span>
+        <div class="inventory-panel">
+            <h3>Inventory</h3>
+            <div id="inventoryDisplay" class="inventory-items">
+                <div class="inventory-item active">stick</div>
+            </div>
+        </div>
 
-        <span class="stat">
-          Health: 
-          <strong>
-            <span id="healthText">100</span>
-          </strong>
-        </span>
+        <div class="game-content">
+            <div id="text" class="game-text">
+                Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons below.
+            </div>
 
-        <span class="stat">
-          Gold: 
-          <strong>
-            <span id="goldText">50</span>
-          </strong>
-        </span>
-      </div>
+            <div id="monsterStats" class="monster-stats">
+                <div class="monster-header">
+                    <span class="stat-icon">🐲</span>
+                    <span class="monster-name" id="monsterName"></span>
+                </div>
+                <div class="health-bar-container">
+                    <div class="health-bar" id="monsterHealthBar"></div>
+                    <span class="health-text" id="monsterHealth"></span>
+                </div>
+            </div>
 
-      <div id="controls">
-        <button id="button1">Go to store</button>
-        <button id="button2">Go to cave</button>
-        <button id="button3">Fight dragon</button>
-      </div>
+            <div class="player-health">
+                <div class="health-bar-container">
+                    <div class="health-bar" id="playerHealthBar"></div>
+                    <span class="health-text" id="playerHealthText">100/100</span>
+                </div>
+            </div>
 
-      <div id="monsterStats">
-        <span class="stat">
-          Monster Name: 
-          <strong>
-            <span id="monsterName"></span>
-          </strong>
-        </span>
+            <div class="controls-panel">
+                <button id="button1" class="game-btn primary">Go to store</button>
+                <button id="button2" class="game-btn secondary">Go to cave</button>
+                <button id="button3" class="game-btn danger">Fight dragon</button>
+            </div>
+        </div>
 
-        <span class="stat">
-          Health: 
-          <strong>
-            <span id="monsterHealth"></span>
-          </strong>
-        </span>
-      </div>
-
-      <div id="text">
-        Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.
-      </div>
-      
+        <div class="location-indicator">
+            <span id="locationText">Town Square</span>
+        </div>
     </div>
-    <script src="./script.js"></script>
 
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
