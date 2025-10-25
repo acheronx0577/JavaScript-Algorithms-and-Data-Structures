@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Numeral Converter | Gradient Magic</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Roman Numeral Converter</h1>
+            <p class="subtitle">Transform numbers into ancient elegance</p>
+        </header>
+
+        <main class="converter-card">
+            <div class="input-group">
+                <label for="number" class="input-label">Enter a decimal number</label>
+                <div class="input-wrapper">
+                    <input 
+                        id="number" 
+                        type="number" 
+                        placeholder="Enter 1-3999"
+                        min="1"
+                        max="3999"
+                    >
+                    <button id="convert-btn">
+                        <span class="btn-text">Convert to Roman</span>
+                        <span class="btn-icon">⚡</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="result-section">
+                <label class="result-label">Roman Numeral Result</label>
+                <div id="output"></div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-title">🎭 Ancient Number System</div>
+                <div class="info-text">
+                    Convert any number from 1 to 3999 into beautiful Roman numerals. The Romans used combinations of I, V, X, L, C, D, M to represent numbers in their elegant system.
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
