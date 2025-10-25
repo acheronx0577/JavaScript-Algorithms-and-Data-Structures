@@ -5,10 +5,7 @@ const animationContainer = document.getElementById("animation-container");
 const animationData = [
   {
     inputVal: 5,
-    addElDelay: 1000,
-    msg: 'decimalToBinary(5) returns "10" + 1 (5 % 2). Then it pops off the stack.',
-    showMsgDelay: 15000,
-    removeElDelay: 20000,
+    addElDelay: 1000
   },
   {
     inputVal: 2,
@@ -45,14 +42,6 @@ const showAnimation = () => {
         </p>
       `;
     }, obj.addElDelay);
-
-    setTimeout(() => {
-      document.getElementById(obj.inputVal).textContent = obj.msg;
-    }, obj.showMsgDelay);
-
-    setTimeout(() => {
-document.getElementById(obj.inputVal).remove()
-    }, obj.removeElDelay);
   });
 };
 
