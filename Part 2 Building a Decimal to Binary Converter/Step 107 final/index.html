@@ -4,33 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Decimal to Binary Converter</title>
+    <title>Binary Converter | Decimal to Binary</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <h1>
-      Decimal to Binary <br />
-      Converter
-    </h1>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">
+          <span class="title-accent">Decimal</span> to 
+          <span class="title-accent">Binary</span> Converter
+        </h1>
+        <p class="subtitle">Convert decimal numbers to binary with visual call stack animation</p>
+      </header>
 
-    <section class="input-container">
-      <label for="number-input">Enter a decimal number:</label>
-      <input
-        value=""
-        type="number"
-        name="decimal number input"
-        id="number-input"
-        class="number-input"
-      />
-      <button class="convert-btn" id="convert-btn">Convert</button>
-    </section>
+      <main class="main-content">
+        <section class="converter-card">
+          <div class="input-group">
+            <label for="number-input" class="input-label">Enter a decimal number:</label>
+            <div class="input-wrapper">
+              <input
+                value=""
+                type="number"
+                name="decimal number input"
+                id="number-input"
+                class="number-input"
+                placeholder="e.g., 5, 10, 255"
+              />
+              <button class="convert-btn" id="convert-btn">
+                <span class="btn-text">Convert</span>
+                <span class="btn-icon">→</span>
+              </button>
+            </div>
+          </div>
 
-    <section class="output-container">
-      <output id="result" for="number-input"></output>
-      <h2>Call stack</h2>
-      <div id="animation-container"></div>
-    </section>
+          <div class="result-section">
+            <label class="result-label">Binary Result:</label>
+            <div class="result-display" id="result">
+              <span class="placeholder">Conversion will appear here</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="animation-section">
+          <div class="section-header">
+            <h2>Call Stack Animation</h2>
+            <div class="info-badge">Try input: 5</div>
+          </div>
+          <div class="animation-window" id="animation-container">
+            <div class="animation-placeholder">
+              Stack visualization will appear here when converting 5
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
     
     <script src="script.js"></script>
   </body>

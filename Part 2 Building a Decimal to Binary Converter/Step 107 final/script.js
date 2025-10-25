@@ -5,24 +5,24 @@ const animationContainer = document.getElementById("animation-container");
 const animationData = [
   {
     inputVal: 5,
-    addElDelay: 1000,
+    addElDelay: 1200,     // Slower than 800
     msg: 'decimalToBinary(5) returns "10" + 1 (5 % 2). Then it pops off the stack.',
-    showMsgDelay: 15000,
-    removeElDelay: 20000,
+    showMsgDelay: 8000,   // Slower than 5000
+    removeElDelay: 12000, // Slower than 8000
   },
   {
     inputVal: 2,
-    addElDelay: 1500,
+    addElDelay: 1800,     // Slower than 1200
     msg: 'decimalToBinary(2) returns "1" + 0 (2 % 2) and gives that value to the stack below. Then it pops off the stack.',
-    showMsgDelay: 10000,
-    removeElDelay: 15000,
+    showMsgDelay: 10000,  // Slower than 6000
+    removeElDelay: 14000, // Slower than 9000
   },
   {
     inputVal: 1,
-    addElDelay: 2000,
+    addElDelay: 2400,     // Slower than 1600
     msg: "decimalToBinary(1) returns '1' (base case) and gives that value to the stack below. Then it pops off the stack.",
-    showMsgDelay: 5000,
-    removeElDelay: 10000,
+    showMsgDelay: 12000,  // Slower than 7000
+    removeElDelay: 16000, // Slower than 10000
   }
 ];
 
@@ -56,10 +56,11 @@ const showAnimation = () => {
   });
 
   setTimeout(() => {
-result.textContent = decimalToBinary(5);
-  }, 20000);
+    result.textContent = decimalToBinary(5);
+  }, 17000); // Slower than 11000
 };
 
+// The rest of your code remains the same...
 const checkUserInput = () => {
   const inputInt = parseInt(numberInput.value);
 
