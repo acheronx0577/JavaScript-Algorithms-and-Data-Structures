@@ -61,13 +61,11 @@ Through this course, I learned:
 
 | 🧱 Course Project Part 2 | 💡 Description | 🌐 Live | 📊 Status |
 |------------------|----------------|---------------|------------|
-| 📅 [**Date Formatter**](https://github.com/...) | Learn the Date Object by Building a Date Formatter | ▶️ [Demo](https://acheronx0577.github.io/...) | ✅ Completed |
-| *[light grey background]* | *[light grey background]* | *[light grey background]* | *[light grey background]* |
-| ⚽ [**Football Team Cards**](https://github.com/...) | Learn Modern JavaScript Methods by Building Football Team Cards | ▶️ [Demo](https://acheronx0577.github.io/...) | ✅ Completed |
-| ✅ [**Todo App**](https://github.com/...) | Learn localStorage by Building a Todo App | ▶️ [Demo](https://acheronx0577.github.io/...) | ✅ Completed |
-| *[light grey background]* | *[light grey background]* | *[light grey background]* | *[light grey background]* |
-| 🔢 [**Decimal to Binary Converter**](https://github.com/...) | Learn Recursion by Building a Decimal to Binary Converter | ▶️ [Demo](https://acheronx0577.github.io/...) | ✅ Completed |
-| 🏛️ [**Roman Numeral Converter**](https://github.com/...) | **Certification Project**: Convert integers to Roman numerals | ▶️ [Demo](https://acheronx0577.github.io/...) | ✅ Completed |
+| 📅 [**Date Formatter**](https://github.com/acheronx0577/JavaScript-Building-a-Date-Formatter) | Learn the Date Object by Building a Date Formatter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Date-Formatter) | ✅ Completed |
+| ⚽ [**Football Team Cards**](https://github.com/acheronx0577/JavaScript-Building-Football-Team-Cards) | Learn Modern JavaScript Methods by Building Football Team Cards | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-Football-Team-Cards) | ✅ Completed |
+| ✅ [**Todo App**](https://github.com/acheronx0577/JavaScript-Building-a-ToDo-App) | Learn localStorage by Building a Todo App | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-ToDo-App) | ✅ Completed |
+| 🔢 [**Decimal to Binary Converter**](https://github.com/acheronx0577/JavaScript-Building-a-Decimal-to-Binary-Converter) | Learn Recursion by Building a Decimal to Binary Converter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Decimal-to-Binary-Converter) | ✅ Completed |
+| 🏛️ [**Roman Numeral Converter**](https://github.com/acheronx0577/JavaScript-Build-a-Roman-Numeral-Converter-Project) | **Certification Project**: Convert integers to Roman numerals | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Build-a-Roman-Numeral-Converter-Project) | ✅ Completed |
 
 ---
 
