@@ -65,7 +65,7 @@ Through this course, I learned:
 | ⚽ [**Football Team Cards**](https://github.com/acheronx0577/JavaScript-Building-Football-Team-Cards) | Learn Modern JavaScript Methods by Building Football Team Cards | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-Football-Team-Cards) | ✅ Completed |
 | ✅ [**Todo App**](https://github.com/acheronx0577/JavaScript-Building-a-ToDo-App) | Learn localStorage by Building a Todo App | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-ToDo-App) | ✅ Completed |
 | 🔢 [**Decimal to Binary Converter**](https://github.com/acheronx0577/JavaScript-Building-a-Decimal-to-Binary-Converter) | Learn Recursion by Building a Decimal to Binary Converter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Decimal-to-Binary-Converter) | ✅ Completed |
-| 🏛️ [**Roman Numeral Converter**](https://github.com/acheronx0577/JavaScript-Roman-Numeral-Converter) | **Certification Project**: Convert integers to Roman numerals | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Roman-Numeral-Converter) | Not Complete |
+| 🏛️ [**Roman Numeral Converter**](https://github.com/acheronx0577/JavaScript-Build-a-Roman-Numeral-Converter-Project) | **Certification Project**: Convert integers to Roman numerals | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Build-a-Roman-Numeral-Converter-Project) | ✅ Completed |
 
 ---
 
