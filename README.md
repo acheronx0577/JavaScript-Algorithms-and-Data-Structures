@@ -116,7 +116,7 @@ open index.html
 
 ## 🏁 Certification Progress
 
-✅ ** 3 / 5 Projects Certification Completed**  
+✅ **3 / 5 Projects Certification Completed**  
 ⭐ Continuing toward full certification!
 
 ---
