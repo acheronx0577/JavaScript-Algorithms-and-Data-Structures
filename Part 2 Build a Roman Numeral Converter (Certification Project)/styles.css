@@ -241,9 +241,20 @@ body {
     padding: 2rem;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
     border-radius: 15px;
-    border-left: 4px solid;
-    border-image: var(--primary-gradient) 1;
     backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--primary-gradient);
+    border-radius: 2px;
 }
 
 .info-title {
