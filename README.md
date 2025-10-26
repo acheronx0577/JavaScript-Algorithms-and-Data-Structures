@@ -65,7 +65,7 @@ Through this course, I learned:
 | ⚽ [**Football Team Cards**](https://github.com/acheronx0577/JavaScript-Building-Football-Team-Cards) | Learn Modern JavaScript Methods by Building Football Team Cards | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-Football-Team-Cards) | ✅ Completed |
 | ✅ [**Todo App**](https://github.com/acheronx0577/JavaScript-Building-a-ToDo-App) | Learn localStorage by Building a Todo App | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-ToDo-App) | ✅ Completed |
 | 🔢 [**Decimal to Binary Converter**](https://github.com/acheronx0577/JavaScript-Building-a-Decimal-to-Binary-Converter) | Learn Recursion by Building a Decimal to Binary Converter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Decimal-to-Binary-Converter) | ✅ Completed |
-| 🏛️ [**Roman Numeral Converter**](https://github.com/acheronx0577/JavaScript-Build-a-Roman-Numeral-Converter-Project) | **Certification Project**: Convert integers to Roman numerals | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Build-a-Roman-Numeral-Converter-Project) | ✅ Completed |
+| 🏛️ [**Roman Numeral Converter (Certification Project)**](https://github.com/acheronx0577/JavaScript-Build-a-Roman-Numeral-Converter-Project) | **Certification Project**: Convert integers to Roman numerals | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Build-a-Roman-Numeral-Converter-Project) | ✅ Completed |
 
 ---
 
@@ -75,7 +75,7 @@ Through this course, I learned:
 | 🔢 [**Number Sorter**](https://github.com/acheronx0577/JavaScript-Building-a-Number-Sorter) | Learn Basic Algorithmic Thinking by Building a Number Sorter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Number-Sorter) | ⌛ In Progress |
 | 📊 [**Statistics Calculator**](https://github.com/acheronx0577/JavaScript-Building-a-Statistics-Calculator) | Learn Advanced Array Methods by Building a Statistics Calculator | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Statistics-Calculator) | ⌛ In Progress |
 | 📈 [**Spreadsheet**](https://github.com/acheronx0577/JavaScript-Building-a-Spreadsheet) | Learn Functional Programming by Building a Spreadsheet | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Spreadsheet) | ⌛ In Progress |
-| 📞 [**Telephone Number Validator**](https://github.com/acheronx0577/JavaScript-Build-a-Telephone-Number-Validator-Project) | **Certification Project**: Build a Telephone Number Validator | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Build-a-Telephone-Number-Validator-Project) | ⌛ In Progress |
+| 📞 [**Telephone Number Validator (Certification Project)**](https://github.com/acheronx0577/JavaScript-Build-a-Telephone-Number-Validator-Project) | **Certification Project**: Build a Telephone Number Validator | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Build-a-Telephone-Number-Validator-Project) | ⌛ In Progress |
 
 ---
 
