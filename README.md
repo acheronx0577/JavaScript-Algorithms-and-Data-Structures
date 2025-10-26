@@ -69,7 +69,7 @@ Through this course, I learned:
 
 ---
 
-| 🧱 Course Project Part 2 | 💡 Description | 🌐 Live | 📊 Status |
+| 🧱 Course Project Part 3 | 💡 Description | 🌐 Live | 📊 Status |
 |--------------------------|----------------|---------|-----------|
 | 🔍 [**Spam Filter**](https://github.com/acheronx0577/JavaScript-Building-a-Spam-Filter) | Learn Regular Expressions by Building a Spam Filter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Spam-Filter) | ⌛ In Progress |
 | 🔢 [**Number Sorter**](https://github.com/acheronx0577/JavaScript-Building-a-Number-Sorter) | Learn Basic Algorithmic Thinking by Building a Number Sorter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Number-Sorter) | ⌛ In Progress |
