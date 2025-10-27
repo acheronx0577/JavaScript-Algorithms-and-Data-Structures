@@ -3,36 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Learn Regular Expressions by Building a Spam Filter</title>
+    <title>Spam Detector - Protect Your Inbox</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <header class="main-text">
-      <h1 class="title">Is this Spam?</h1>
-      <p class="description">
-        Enter a phrase to check if it would be marked as spam or not.
-      </p>
-    </header>
+    <div class="compact-container">
+      <header class="compact-header">
+        <h1 class="compact-title">🛡️ Spam Detector</h1>
+        <p class="compact-description">
+          Check messages for spam patterns instantly
+        </p>
+      </header>
 
-    <main>
-      <label class="message-label" for="message-input">Message: </label>
-      <textarea
-        placeholder="Enter message here"
-        value=""
-        type="text"
-        name="message"
-        id="message-input"
-        rows="10"
-        cols="40"
-      ></textarea>
-      <button class="btn" id="check-message-btn" type="button">
-        Check message
-      </button>
-      <p id="result"></p>
-    </main>
+      <main class="compact-main">
+        <div class="input-card">
+          <label class="compact-label" for="message-input">
+            <span>Message to analyze:</span>
+            <span class="char-count" id="char-count">0 chars</span>
+          </label>
+          <textarea
+            placeholder="Paste or type your message here..."
+            value=""
+            type="text"
+            name="message"
+            id="message-input"
+            rows="4"
+          ></textarea>
+          
+          <div class="compact-buttons">
+            <button class="btn btn-primary" id="check-message-btn" type="button">
+              🔍 Analyze
+            </button>
+            <button class="btn btn-secondary" id="clear-btn" type="button">
+              🗑️ Clear
+            </button>
+          </div>
+        </div>
 
-    <footer class="footer">&copy; freeCodeCamp</footer>
+        <div class="result-card" id="result-card">
+          <div class="result-header">
+            <div class="result-icon" id="result-icon">⏳</div>
+            <h3 class="result-title" id="result-title">Ready to Analyze</h3>
+          </div>
+          <p class="result-message" id="result-message">
+            Enter a message above to check for spam patterns.
+          </p>
+          <div class="result-details" id="result-details">
+            <div class="patterns-found" id="patterns-found"></div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h4>📋 Detection Patterns</h4>
+          <div class="pattern-grid">
+            <span class="pattern-tag">💰 Money amounts</span>
+            <span class="pattern-tag">🎁 Free offers</span>
+            <span class="pattern-tag">📈 Stock alerts</span>
+            <span class="pattern-tag">👋 Dear friend</span>
+            <span class="pattern-tag">🆘 Urgent help</span>
+          </div>
+        </div>
+      </main>
+
+      <footer class="compact-footer">
+        <p>© 2024 Spam Detector | Built with ❤️ through freeCodeCamp</p>
+      </footer>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
