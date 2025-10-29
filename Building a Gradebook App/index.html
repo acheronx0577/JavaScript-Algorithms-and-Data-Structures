@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>GRADE_CALCULATOR</title>
+  </head>
+  <body>
+    <div class="terminal">
+      <header class="terminal-header">
+        <div class="window-controls">
+          <span class="control close"></span>
+          <span class="control minimize"></span>
+          <span class="control maximize"></span>
+        </div>
+        <div class="title-bar">
+          <span class="prompt">></span>
+          <span class="title">GRADE_CALCULATOR</span>
+          <span class="cursor">_</span>
+        </div>
+      </header>
+
+      <main class="terminal-body">
+        <div class="app-header">
+          <h1 class="app-title">~/education/grade_calculator</h1>
+          <div class="status-bar">
+            <span class="status-item">READY</span>
+            <span class="status-item">v1.0.0</span>
+            <span class="status-item">UTF-8</span>
+          </div>
+        </div>
+
+        <div class="input-section">
+          <div class="input-group">
+            <label for="scores" class="input-label">
+              <span class="label-text">CLASS_SCORES</span>
+              <span class="label-desc">[comma_separated]</span>
+            </label>
+            <input
+              type="text"
+              id="scores"
+              class="terminal-input"
+              placeholder="92, 88, 77, 100, 67"
+              value="92, 88, 12, 77, 57, 100, 67, 38, 97, 89"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="studentScore" class="input-label">
+              <span class="label-text">STUDENT_SCORE</span>
+              <span class="label-desc">[0-100]</span>
+            </label>
+            <input
+              type="number"
+              id="studentScore"
+              class="terminal-input"
+              min="0"
+              max="100"
+              placeholder="85"
+              value="37"
+            />
+          </div>
+
+          <button id="calculate" class="terminal-btn primary">
+            <span class="btn-text">[CALCULATE_GRADE]</span>
+          </button>
+        </div>
+
+        <div id="output" class="output-panel hide">
+          <div class="output-header">
+            <span class="output-title">GRADE_REPORT</span>
+            <span class="output-status">PROCESSED</span>
+          </div>
+          <div class="output-content">
+            <div id="result" class="result-content"></div>
+          </div>
+        </div>
+
+        <div class="info-panel">
+          <div class="info-header">
+            <span class="info-title">GRADING_SCALE</span>
+          </div>
+          <div class="info-content">
+            <div class="grade-scale">
+              <div class="grade-item">
+                <span class="grade-letter">A++</span>
+                <span class="grade-range">100</span>
+              </div>
+              <div class="grade-item">
+                <span class="grade-letter">A</span>
+                <span class="grade-range">90-99</span>
+              </div>
+              <div class="grade-item">
+                <span class="grade-letter">B</span>
+                <span class="grade-range">80-89</span>
+              </div>
+              <div class="grade-item">
+                <span class="grade-letter">C</span>
+                <span class="grade-range">70-79</span>
+              </div>
+              <div class="grade-item">
+                <span class="grade-letter">D</span>
+                <span class="grade-range">60-69</span>
+              </div>
+              <div class="grade-item">
+                <span class="grade-letter">F</span>
+                <span class="grade-range">0-59</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="terminal-footer">
+        <div class="footer-stats">
+          <span class="stat">STATUS: READY</span>
+          <span class="stat">STUDENTS: <span id="student-count">0</span></span>
+          <span class="stat">AVERAGE: <span id="avg-display">-</span></span>
+        </div>
+      </footer>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
