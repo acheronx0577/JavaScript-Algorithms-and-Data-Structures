@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+    <title>Statistics Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>📊 Statistics Calculator</h1>
+        <p class="subtitle">Enter a list of comma-separated numbers to calculate various statistical measures</p>
+      </header>
+
+      <main>
+        <section class="input-section">
+          <form onsubmit="calculate(); return false;">
+            <div class="input-group">
+              <label for="numbers">Numbers:</label>
+              <input type="text" name="numbers" id="numbers" placeholder="e.g., 1, 2, 3, 4, 5" />
+              <button type="submit">Calculate</button>
+            </div>
+            <small>Separate numbers with commas (e.g., 1, 2, 3, 4, 5)</small>
+          </form>
+        </section>
+
+        <section class="results-section">
+          <h2>Results</h2>
+          <div class="results-grid">
+            <div class="stat-card">
+              <div class="stat-header">
+                <h3>Mean</h3>
+                <span class="info" title="The average of all numbers">ℹ️</span>
+              </div>
+              <p class="stat-value" id="mean">-</p>
+              <p class="stat-desc">Average value</p>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-header">
+                <h3>Median</h3>
+                <span class="info" title="The middle value when sorted">ℹ️</span>
+              </div>
+              <p class="stat-value" id="median">-</p>
+              <p class="stat-desc">Middle value</p>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-header">
+                <h3>Mode</h3>
+                <span class="info" title="The most frequent value(s)">ℹ️</span>
+              </div>
+              <p class="stat-value" id="mode">-</p>
+              <p class="stat-desc">Most frequent</p>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-header">
+                <h3>Range</h3>
+                <span class="info" title="Difference between max and min">ℹ️</span>
+              </div>
+              <p class="stat-value" id="range">-</p>
+              <p class="stat-desc">Spread of data</p>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-header">
+                <h3>Variance</h3>
+                <span class="info" title="Average of squared differences from mean">ℹ️</span>
+              </div>
+              <p class="stat-value" id="variance">-</p>
+              <p class="stat-desc">Data dispersion</p>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-header">
+                <h3>Standard Deviation</h3>
+                <span class="info" title="Square root of variance">ℹ️</span>
+              </div>
+              <p class="stat-value" id="standardDeviation">-</p>
+              <p class="stat-desc">Spread measurement</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
