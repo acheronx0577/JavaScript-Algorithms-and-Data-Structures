@@ -51,31 +51,31 @@ Through this course, I learned:
 | 🏛️ [**Introductory JavaScript**](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Pyramid%20Generator.js) | Build a Pyramid Generator | ▶️ [Link](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Pyramid%20Generator.js) | ✅Completed |
 | 🧮 [**Gradebook App**](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Gradebook%20App.js) | Review JS fundamentals and averages | ▶️ [Link](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Gradebook%20App.js) | ✅Completed |
 | ⚔️ [**Role Playing Game**](https://github.com/acheronx0577/JavaScript-Role-Play-Game) | Learn basic JavaScript by building a small RPG | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Role-Play-Game) | ✅Completed |
-| 🎨 [**Random Background Color Changer**](https://github.com/acheronx0577/JavaScript-Random-Background-Color-Changer) | Debugging practice & randomization | ▶️[Demo](https://acheronx0577.github.io/JavaScript-Random-Background-Color-Changer) | ✅Completed |
-| 🍎 [**Calorie Counter**](https://github.com/acheronx0577/JavaScript-Building-a-Calorie-Counter) | Form validation and DOM updates | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Calorie-Counter) | ✅Completed |
-| ✊ [**Rock, Paper, Scissors Game**](https://github.com/acheronx0577/JavaScript-Building-a-Rock-Paper-Scissors-Game) | DOM manipulation and game logic | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Rock-Paper-Scissors-Game) | ✅Completed |
-| 🎵 [**Music Player**](https://github.com/acheronx0577/JavaScript-Building-a-Music-Player) | String & array methods in action | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Music-Player) | ✅Completed |
-| 🔁 [**Palindrome Checker (Certification Project)**](https://github.com/acheronx0577/JavaScript-Palindrome-Checker) | Final JS project — check if a word is a palindrome | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Palindrome-Checker) | ✅Completed |
+| 🎨 [**Random Background Color Changer**](https://github.com/acheronx0577/JavaScript-Random-Background-Color-Changer) | Debugging practice & randomization | ▶️[Link](https://acheronx0577.github.io/JavaScript-Random-Background-Color-Changer) | ✅Completed |
+| 🍎 [**Calorie Counter**](https://github.com/acheronx0577/JavaScript-Building-a-Calorie-Counter) | Form validation and DOM updates | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Calorie-Counter) | ✅Completed |
+| ✊ [**Rock, Paper, Scissors Game**](https://github.com/acheronx0577/JavaScript-Building-a-Rock-Paper-Scissors-Game) | DOM manipulation and game logic | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Rock-Paper-Scissors-Game) | ✅Completed |
+| 🎵 [**Music Player**](https://github.com/acheronx0577/JavaScript-Building-a-Music-Player) | String & array methods in action | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Music-Player) | ✅Completed |
+| 🔁 [**Palindrome Checker (Certification Project)**](https://github.com/acheronx0577/JavaScript-Palindrome-Checker) | Final JS project — check if a word is a palindrome | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Palindrome-Checker) | ✅Completed |
 
 ---
 
 | 🧱 Course Project Part 2 | 💡 Description | 🌐 Live | 📊 Status |
 |------------------|----------------|---------------|------------|
-| 📅 [**Date Formatter**](https://github.com/acheronx0577/JavaScript-Building-a-Date-Formatter) | Learn the Date Object by Building a Date Formatter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Date-Formatter) | ✅Completed |
-| ⚽ [**Football Team Cards**](https://github.com/acheronx0577/JavaScript-Building-Football-Team-Cards) | Learn Modern JavaScript Methods by Building Football Team Cards | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-Football-Team-Cards) | ✅Completed |
-| ✅ [**Todo App**](https://github.com/acheronx0577/JavaScript-Building-a-ToDo-App) | Learn localStorage by Building a Todo App | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-ToDo-App) | ✅Completed |
-| 🔢 [**Decimal to Binary Converter**](https://github.com/acheronx0577/JavaScript-Building-a-Decimal-to-Binary-Converter) | Learn Recursion by Building a Decimal to Binary Converter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Decimal-to-Binary-Converter) | ✅Completed |
-| 🏛️ [**Roman Numeral Converter (Certification Project)**](https://github.com/acheronx0577/JavaScript-Build-a-Roman-Numeral-Converter-Project) | **Certification Project**: Convert integers to Roman numerals | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Build-a-Roman-Numeral-Converter-Project) | ✅Completed |
+| 📅 [**Date Formatter**](https://github.com/acheronx0577/JavaScript-Building-a-Date-Formatter) | Learn the Date Object by Building a Date Formatter | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Date-Formatter) | ✅Completed |
+| ⚽ [**Football Team Cards**](https://github.com/acheronx0577/JavaScript-Building-Football-Team-Cards) | Learn Modern JavaScript Methods by Building Football Team Cards | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-Football-Team-Cards) | ✅Completed |
+| ✅ [**Todo App**](https://github.com/acheronx0577/JavaScript-Building-a-ToDo-App) | Learn localStorage by Building a Todo App | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-ToDo-App) | ✅Completed |
+| 🔢 [**Decimal to Binary Converter**](https://github.com/acheronx0577/JavaScript-Building-a-Decimal-to-Binary-Converter) | Learn Recursion by Building a Decimal to Binary Converter | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Decimal-to-Binary-Converter) | ✅Completed |
+| 🏛️ [**Roman Numeral Converter (Certification Project)**](https://github.com/acheronx0577/JavaScript-Build-a-Roman-Numeral-Converter-Project) | **Certification Project**: Convert integers to Roman numerals | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Build-a-Roman-Numeral-Converter-Project) | ✅Completed |
 
 ---
 
 | 🧱 Course Project Part 3 | 💡 Description | 🌐 Live | 📊 Status |
 |--------------------------|----------------|---------|-----------|
-| 🔍 [**Spam Filter**](https://github.com/acheronx0577/JavaScript-Building-a-Spam-Filter) | Learn Regular Expressions by Building a Spam Filter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Spam-Filter) | ✅Completed |
-| 🔢 [**Number Sorter**](https://github.com/acheronx0577/JavaScript-Building-a-Number-Sorter) | Learn Basic Algorithmic Thinking by Building a Number Sorter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Number-Sorter) | ✅Completed |
-| 📊 [**Statistics Calculator**](https://github.com/acheronx0577/JavaScript-Building-a-Statistics-Calculator) | Learn Advanced Array Methods by Building a Statistics Calculator | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Statistics-Calculator) | ✅Completed |
-| 📈 [**Spreadsheet**](https://github.com/acheronx0577/JavaScript-Building-a-Spreadsheet) | Learn Functional Programming by Building a Spreadsheet | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Spreadsheet) | ⌛ In Progress |
-| 📞 [**Telephone Number Validator (Certification Project)**](https://github.com/acheronx0577/JavaScript-Build-a-Telephone-Number-Validator-Project) | **Certification Project**: Build a Telephone Number Validator | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Build-a-Telephone-Number-Validator-Project) | ⌛ In Progress |
+| 🔍 [**Spam Filter**](https://github.com/acheronx0577/JavaScript-Building-a-Spam-Filter) | Learn Regular Expressions by Building a Spam Filter | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Spam-Filter) | ✅Completed |
+| 🔢 [**Number Sorter**](https://github.com/acheronx0577/JavaScript-Building-a-Number-Sorter) | Learn Basic Algorithmic Thinking by Building a Number Sorter | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Number-Sorter) | ✅Completed |
+| 📊 [**Statistics Calculator**](https://github.com/acheronx0577/JavaScript-Building-a-Statistics-Calculator) | Learn Advanced Array Methods by Building a Statistics Calculator | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Statistics-Calculator) | ✅Completed |
+| 📈 [**Spreadsheet**](https://github.com/acheronx0577/JavaScript-Building-a-Spreadsheet) | Learn Functional Programming by Building a Spreadsheet | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Spreadsheet) | ⌛ In Progress |
+| 📞 [**Telephone Number Validator (Certification Project)**](https://github.com/acheronx0577/JavaScript-Build-a-Telephone-Number-Validator-Project) | **Certification Project**: Build a Telephone Number Validator | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Build-a-Telephone-Number-Validator-Project) | ⌛ In Progress |
 
 ---
 
