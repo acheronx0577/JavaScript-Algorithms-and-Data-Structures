@@ -48,7 +48,7 @@ Through this course, I learned:
 
 | 🧱 Course Project Part 1 | 💡 Description | 🌐 Live | 📊 Status |
 |------------------|----------------|---------------|------------|
-| 🏛️ [**Introductory JavaScript**](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Pyramid%20Generator.js) | Build a Pyramid Generator | ▶️ [Link](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Pyramid%20Generator.js) | ✅ Completed |
+| 🏛️ [**Introductory JavaScript**](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Pyramid%20Generator.js) | Build a Pyramid Generator | ▶️ [Link](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Pyramid%20Generator.js) |✅ Completed |
 | 🧮 [**Gradebook App**](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Gradebook%20App.js) | Review JS fundamentals and averages | ▶️ [Link](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Gradebook%20App.js) | ✅ Completed |
 | ⚔️ [**Role Playing Game**](https://github.com/acheronx0577/JavaScript-Role-Play-Game) | Learn basic JavaScript by building a small RPG | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Role-Play-Game) | ✅ Completed |
 | 🎨 [**Random Background Color Changer**](https://github.com/acheronx0577/JavaScript-Random-Background-Color-Changer) | Debugging practice & randomization | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Random-Background-Color-Changer) | ✅Completed |
