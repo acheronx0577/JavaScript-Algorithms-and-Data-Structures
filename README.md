@@ -50,8 +50,8 @@ Through this course, I learned:
 |------------------|----------------|---------------|------------|
 | 🏛️ [**Introductory JavaScript**](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Pyramid%20Generator.js) | Build a Pyramid Generator | ▶️ [Link](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Pyramid%20Generator.js) | ✅Completed |
 | 🧮 [**Gradebook App**](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Gradebook%20App.js) | Review JS fundamentals and averages | ▶️ [Link](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Gradebook%20App.js) | ✅Completed |
-| ⚔️ [**Role Playing Game**](https://github.com/acheronx0577/JavaScript-Role-Play-Game) | Learn basic JavaScript by building a small RPG | [▶️](https://acheronx0577.github.io/JavaScript-Role-Play-Game) | ✅Completed |
-| 🎨 [**Random Background Color Changer**](https://github.com/acheronx0577/JavaScript-Random-Background-Color-Changer) | Debugging practice & randomization | ▶️[Link](https://acheronx0577.github.io/JavaScript-Random-Background-Color-Changer) | ✅Completed |
+| ⚔️ [**Role Playing Game**](https://github.com/acheronx0577/JavaScript-Role-Play-Game) | Learn basic JavaScript by building a small RPG | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Role-Play-Game) | ✅Completed |
+| 🎨 [**Random Background Color Changer**](https://github.com/acheronx0577/JavaScript-Random-Background-Color-Changer) | Debugging practice & randomization | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Random-Background-Color-Changer) | ✅Completed |
 | 🍎 [**Calorie Counter**](https://github.com/acheronx0577/JavaScript-Building-a-Calorie-Counter) | Form validation and DOM updates | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Calorie-Counter) | ✅Completed |
 | ✊ [**Rock, Paper, Scissors Game**](https://github.com/acheronx0577/JavaScript-Building-a-Rock-Paper-Scissors-Game) | DOM manipulation and game logic | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Rock-Paper-Scissors-Game) | ✅Completed |
 | 🎵 [**Music Player**](https://github.com/acheronx0577/JavaScript-Building-a-Music-Player) | String & array methods in action | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Music-Player) | ✅Completed |
@@ -61,11 +61,11 @@ Through this course, I learned:
 
 | 🧱 Course Project Part 2 | 💡 Description | 🌐 Live Demo | 📊 Status |
 |------------------|----------------|---------------|------------|
-| 📅 [**Date Formatter**](https://github.com/acheronx0577/JavaScript-Building-a-Date-Formatter) | Learn the Date Object by Building a Date Formatter | ▶️[Link](https://acheronx0577.github.io/JavaScript-Building-a-Date-Formatter) | ✅Completed |
-| ⚽ [**Football Team Cards**](https://github.com/acheronx0577/JavaScript-Building-Football-Team-Cards) | Learn Modern JavaScript Methods by Building Football Team Cards | ▶️[Link](https://acheronx0577.github.io/JavaScript-Building-Football-Team-Cards) | ✅Completed |
-| ✅ [**Todo App**](https://github.com/acheronx0577/JavaScript-Building-a-ToDo-App) | Learn localStorage by Building a Todo App | ▶️[Link](https://acheronx0577.github.io/JavaScript-Building-a-ToDo-App) | ✅Completed |
-| 🔢 [**Decimal to Binary Converter**](https://github.com/acheronx0577/JavaScript-Building-a-Decimal-to-Binary-Converter) | Learn Recursion by Building a Decimal to Binary Converter | ▶️[Link](https://acheronx0577.github.io/JavaScript-Building-a-Decimal-to-Binary-Converter) | ✅Completed |
-| 🏛️ [**Roman Numeral Converter (Certification Project)**](https://github.com/acheronx0577/JavaScript-Build-a-Roman-Numeral-Converter-Project) | **Certification Project**: Convert integers to Roman numerals | ▶️[Link](https://acheronx0577.github.io/JavaScript-Build-a-Roman-Numeral-Converter-Project) | ✅Completed |
+| 📅 [**Date Formatter**](https://github.com/acheronx0577/JavaScript-Building-a-Date-Formatter) | Learn the Date Object by Building a Date Formatter | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Date-Formatter) | ✅Completed |
+| ⚽ [**Football Team Cards**](https://github.com/acheronx0577/JavaScript-Building-Football-Team-Cards) | Learn Modern JavaScript Methods by Building Football Team Cards | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-Football-Team-Cards) | ✅Completed |
+| ✅ [**Todo App**](https://github.com/acheronx0577/JavaScript-Building-a-ToDo-App) | Learn localStorage by Building a Todo App | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-ToDo-App) | ✅Completed |
+| 🔢 [**Decimal to Binary Converter**](https://github.com/acheronx0577/JavaScript-Building-a-Decimal-to-Binary-Converter) | Learn Recursion by Building a Decimal to Binary Converter | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Decimal-to-Binary-Converter) | ✅Completed |
+| 🏛️ [**Roman Numeral Converter (Certification Project)**](https://github.com/acheronx0577/JavaScript-Build-a-Roman-Numeral-Converter-Project) | **Certification Project**: Convert integers to Roman numerals | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Build-a-Roman-Numeral-Converter-Project) | ✅Completed |
 
 ---
 
