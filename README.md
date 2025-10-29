@@ -46,7 +46,7 @@ Through this course, I learned:
 
 ## 🕹️ Project Showcase & Live Demos
 
-| 🧱 Course Project Part 1 | 💡 Description | 🌐 Live | 📊 Status |
+| 🧱 Course Project Part 1 | 💡 Description | 🌐 Live Demo | 📊 Status |
 |------------------|----------------|---------------|------------|
 | 🏛️ [**Introductory JavaScript**](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Pyramid%20Generator.js) | Build a Pyramid Generator | ▶️ [Link](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Pyramid%20Generator.js) | ✅Completed |
 | 🧮 [**Gradebook App**](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Gradebook%20App.js) | Review JS fundamentals and averages | ▶️ [Link](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Gradebook%20App.js) | ✅Completed |
@@ -59,7 +59,7 @@ Through this course, I learned:
 
 ---
 
-| 🧱 Course Project Part 2 | 💡 Description | 🌐 Live | 📊 Status |
+| 🧱 Course Project Part 2 | 💡 Description | 🌐 Live Demo | 📊 Status |
 |------------------|----------------|---------------|------------|
 | 📅 [**Date Formatter**](https://github.com/acheronx0577/JavaScript-Building-a-Date-Formatter) | Learn the Date Object by Building a Date Formatter | ▶️[Link](https://acheronx0577.github.io/JavaScript-Building-a-Date-Formatter) | ✅Completed |
 | ⚽ [**Football Team Cards**](https://github.com/acheronx0577/JavaScript-Building-Football-Team-Cards) | Learn Modern JavaScript Methods by Building Football Team Cards | ▶️[Link](https://acheronx0577.github.io/JavaScript-Building-Football-Team-Cards) | ✅Completed |
@@ -69,7 +69,7 @@ Through this course, I learned:
 
 ---
 
-| 🧱 Course Project Part 3 | 💡 Description | 🌐 Live | 📊 Status |
+| 🧱 Course Project Part 3 | 💡 Description | 🌐 Live Demo | 📊 Status |
 |--------------------------|----------------|---------|-----------|
 | 🔍 [**Spam Filter**](https://github.com/acheronx0577/JavaScript-Building-a-Spam-Filter) | Learn Regular Expressions by Building a Spam Filter | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Spam-Filter) | ✅Completed |
 | 🔢 [**Number Sorter**](https://github.com/acheronx0577/JavaScript-Building-a-Number-Sorter) | Learn Basic Algorithmic Thinking by Building a Number Sorter | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Number-Sorter) | ✅Completed |
