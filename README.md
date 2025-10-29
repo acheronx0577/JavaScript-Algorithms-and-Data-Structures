@@ -50,12 +50,12 @@ Through this course, I learned:
 |------------------|----------------|---------------|------------|
 | 🏛️ [**Introductory JavaScript**](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Pyramid%20Generator.js) | Build a Pyramid Generator | ▶️ [Link](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Pyramid%20Generator.js) | ✅Completed |
 | 🧮 [**Gradebook App**](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Gradebook%20App.js) | Review JS fundamentals and averages | ▶️ [Link](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Gradebook%20App.js) | ✅Completed |
-| ⚔️ [**Role Playing Game**](https://github.com/acheronx0577/JavaScript-Role-Play-Game) | Learn basic JavaScript by building a small RPG | ▶️[Link](https://acheronx0577.github.io/JavaScript-Role-Play-Game) | ✅Completed |
+| ⚔️ [**Role Playing Game**](https://github.com/acheronx0577/JavaScript-Role-Play-Game) | Learn basic JavaScript by building a small RPG | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Role-Play-Game) | ✅Completed |
 | 🎨 [**Random Background Color Changer**](https://github.com/acheronx0577/JavaScript-Random-Background-Color-Changer) | Debugging practice & randomization | ▶️[Demo](https://acheronx0577.github.io/JavaScript-Random-Background-Color-Changer) | ✅Completed |
-| 🍎 [**Calorie Counter**](https://github.com/acheronx0577/JavaScript-Building-a-Calorie-Counter) | Form validation and DOM updates | ▶️[Demo](https://acheronx0577.github.io/JavaScript-Building-a-Calorie-Counter) | ✅Completed |
-| ✊ [**Rock, Paper, Scissors Game**](https://github.com/acheronx0577/JavaScript-Building-a-Rock-Paper-Scissors-Game) | DOM manipulation and game logic | ▶️[Demo](https://acheronx0577.github.io/JavaScript-Building-a-Rock-Paper-Scissors-Game) | ✅Completed |
-| 🎵 [**Music Player**](https://github.com/acheronx0577/JavaScript-Building-a-Music-Player) | String & array methods in action | ▶️[Demo](https://acheronx0577.github.io/JavaScript-Building-a-Music-Player) | ✅Completed |
-| 🔁 [**Palindrome Checker (Certification Project)**](https://github.com/acheronx0577/JavaScript-Palindrome-Checker) | Final JS project — check if a word is a palindrome | ▶️[Demo](https://acheronx0577.github.io/JavaScript-Palindrome-Checker) | ✅Completed |
+| 🍎 [**Calorie Counter**](https://github.com/acheronx0577/JavaScript-Building-a-Calorie-Counter) | Form validation and DOM updates | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Calorie-Counter) | ✅Completed |
+| ✊ [**Rock, Paper, Scissors Game**](https://github.com/acheronx0577/JavaScript-Building-a-Rock-Paper-Scissors-Game) | DOM manipulation and game logic | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Rock-Paper-Scissors-Game) | ✅Completed |
+| 🎵 [**Music Player**](https://github.com/acheronx0577/JavaScript-Building-a-Music-Player) | String & array methods in action | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Music-Player) | ✅Completed |
+| 🔁 [**Palindrome Checker (Certification Project)**](https://github.com/acheronx0577/JavaScript-Palindrome-Checker) | Final JS project — check if a word is a palindrome | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Palindrome-Checker) | ✅Completed |
 
 ---
 
