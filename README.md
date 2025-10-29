@@ -73,7 +73,7 @@ Through this course, I learned:
 |--------------------------|----------------|---------|-----------|
 | 🔍 [**Spam Filter**](https://github.com/acheronx0577/JavaScript-Building-a-Spam-Filter) | Learn Regular Expressions by Building a Spam Filter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Spam-Filter) | ✅Completed |
 | 🔢 [**Number Sorter**](https://github.com/acheronx0577/JavaScript-Building-a-Number-Sorter) | Learn Basic Algorithmic Thinking by Building a Number Sorter | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Number-Sorter) | ✅Completed |
-| 📊 [**Statistics Calculator**](https://github.com/acheronx0577/JavaScript-Building-a-Statistics-Calculator) | Learn Advanced Array Methods by Building a Statistics Calculator | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Statistics-Calculator) | ⌛ In Progress |
+| 📊 [**Statistics Calculator**](https://github.com/acheronx0577/JavaScript-Building-a-Statistics-Calculator) | Learn Advanced Array Methods by Building a Statistics Calculator | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Statistics-Calculator) | ✅Completed |
 | 📈 [**Spreadsheet**](https://github.com/acheronx0577/JavaScript-Building-a-Spreadsheet) | Learn Functional Programming by Building a Spreadsheet | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Building-a-Spreadsheet) | ⌛ In Progress |
 | 📞 [**Telephone Number Validator (Certification Project)**](https://github.com/acheronx0577/JavaScript-Build-a-Telephone-Number-Validator-Project) | **Certification Project**: Build a Telephone Number Validator | ▶️ [Demo](https://acheronx0577.github.io/JavaScript-Build-a-Telephone-Number-Validator-Project) | ⌛ In Progress |
 
