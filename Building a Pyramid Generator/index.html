@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>PYRAMID_GENERATOR</title>
+  </head>
+  <body>
+    <div class="terminal">
+      <header class="terminal-header">
+        <div class="window-controls">
+          <span class="control close"></span>
+          <span class="control minimize"></span>
+          <span class="control maximize"></span>
+        </div>
+        <div class="title-bar">
+          <span class="prompt">></span>
+          <span class="title">PYRAMID_GENERATOR</span>
+          <span class="cursor">_</span>
+        </div>
+      </header>
+
+      <main class="terminal-body">
+        <div class="app-header">
+          <h1 class="app-title">~/patterns/pyramid_generator</h1>
+          <div class="status-bar">
+            <span class="status-item">READY</span>
+            <span class="status-item">v1.2.0</span>
+            <span class="status-item">UTF-8</span>
+          </div>
+        </div>
+
+        <div class="control-panel">
+          <div class="input-group">
+            <label for="character" class="input-label">
+              <span class="label-text">CHARACTER</span>
+              <span class="label-desc">[symbol]</span>
+            </label>
+            <input
+              type="text"
+              id="character"
+              class="terminal-input"
+              maxlength="1"
+              value="!"
+              placeholder="#"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="count" class="input-label">
+              <span class="label-text">ROW_COUNT</span>
+              <span class="label-desc">[1-20]</span>
+            </label>
+            <input
+              type="number"
+              id="count"
+              class="terminal-input"
+              min="1"
+              max="20"
+              value="10"
+              placeholder="10"
+            />
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="inverted" class="terminal-checkbox" />
+            <label for="inverted" class="checkbox-label">
+              INVERTED_PYRAMID
+            </label>
+          </div>
+
+          <button id="generate" class="terminal-btn primary">
+            <span class="btn-text">[GENERATE]</span>
+          </button>
+          <button id="clear" class="terminal-btn secondary">
+            <span class="btn-text">[CLEAR]</span>
+          </button>
+        </div>
+
+        <div class="output-section">
+          <div class="output-header">
+            <span class="output-title">PYRAMID_OUTPUT</span>
+            <span class="output-stats">
+              ROWS: <span id="row-count">0</span> | 
+              CHARS: <span id="char-count">0</span>
+            </span>
+          </div>
+          <div id="pyramid-output" class="pyramid-output">
+            <div class="placeholder">PYRAMID_WILL_APPEAR_HERE</div>
+          </div>
+        </div>
+
+        <div class="info-panel">
+          <div class="info-header">
+            <span class="info-title">PATTERN_INFO</span>
+          </div>
+          <div class="info-content">
+            <div class="pattern-stats">
+              <div class="stat-item">
+                <span class="stat-label">CHARACTER:</span>
+                <span id="current-char" class="stat-value">!</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">MAX_WIDTH:</span>
+                <span id="max-width" class="stat-value">-</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">TOTAL_CHARS:</span>
+                <span id="total-chars" class="stat-value">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="terminal-footer">
+        <div class="footer-stats">
+          <span class="stat">STATUS: <span id="status">READY</span></span>
+          <span class="stat">MODE: <span id="mode">NORMAL</span></span>
+          <span class="stat">THEME: CATPPUCCIN_MOCHA</span>
+        </div>
+      </footer>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
