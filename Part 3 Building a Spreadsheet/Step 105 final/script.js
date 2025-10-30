@@ -349,7 +349,7 @@ document.addEventListener('keydown', function(e) {
     }
     
     // SHIFT + ARROW KEYS for range selection
-    if (selectedCell && e.shiftKey && ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+    if (selectedCell && !e.shiftKey && !e.ctrlKey && ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
         e.preventDefault();
         if (!selectionStart) {
             selectionStart = selectedCell;
@@ -542,20 +542,26 @@ document.addEventListener('keydown', function(e) {
 
   // Apply formula button
   applyFormulaBtn.addEventListener('click', function() {
-    const formula = formulaInput.value.trim();
-    
-    if (!selectedCell) {
-      formulaStatus.textContent = 'NO_CELL_SELECTED';
-      formulaStatus.className = 'formula-status warning';
-      editMode.textContent = 'ERROR';
+      const formula = formulaInput.value.trim();
       
-      setTimeout(() => {
-        formulaStatus.textContent = 'READY';
-        formulaStatus.className = 'formula-status ready';
-        editMode.textContent = 'READY';
-      }, 2000);
-      return;
-    }
+      // WARNING: Relative references don't work in ranges
+      if (formula.startsWith('=') && selectedRange.length > 1 && formula.match(/[A-J][1-9][0-9]?/)) {
+          const useRelative = confirm('Warning: Cell references in formulas will not adjust relative to each cell. Apply anyway?');
+          if (!useRelative) return;
+      }
+      
+      if (!selectedCell) {
+        formulaStatus.textContent = 'NO_CELL_SELECTED';
+        formulaStatus.className = 'formula-status warning';
+        editMode.textContent = 'ERROR';
+        
+        setTimeout(() => {
+          formulaStatus.textContent = 'READY';
+          formulaStatus.className = 'formula-status ready';
+          editMode.textContent = 'READY';
+        }, 2000);
+        return;
+      }
 
     if (formula) {
       try {

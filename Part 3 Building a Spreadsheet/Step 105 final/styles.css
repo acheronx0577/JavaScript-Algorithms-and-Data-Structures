@@ -782,15 +782,14 @@ body {
 }
 
 .spreadsheet-grid input.range-start {
-  border-left: 3px solid var(--accent-green) !important;
-  border-top: 3px solid var(--accent-green) !important;
+  border-left: 3px solid var(--accent-green);
+  border-top: 3px solid var(--accent-green);
 }
 
 .spreadsheet-grid input.range-end {
-  border-right: 3px solid var(--accent-cyan) !important;
-  border-bottom: 3px solid var(--accent-cyan) !important;
+  border-right: 3px solid var(--accent-cyan);
+  border-bottom: 3px solid var(--accent-cyan);
 }
-
 .spreadsheet-grid input.range-selected:hover {
   background: var(--accent-pink);
   border-color: var(--accent-purple);
