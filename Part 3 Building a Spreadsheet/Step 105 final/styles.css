@@ -68,6 +68,25 @@ body {
   justify-content: space-between;
 }
 
+/* Add to your styles.css */
+.terminal-btn {
+  min-width: 80px;
+}
+
+/* Style for active VIEW button */
+.terminal-btn.active {
+  background: var(--accent-purple);
+  border-color: var(--accent-purple);
+  color: var(--bg-primary);
+  /* Ensure contrast */
+}
+
+.terminal-btn.active:hover {
+  background: var(--accent-pink);
+  border-color: var(--accent-pink);
+  color: var(--bg-primary);
+}
+
 .window-controls {
   display: flex;
   gap: 8px;
@@ -507,6 +526,46 @@ body {
 .spreadsheet-grid input:hover {
     border-color: var(--accent-teal);
     background: var(--bg-secondary);
+}
+
+/* Add cell selection styles */
+.spreadsheet-grid input.selected {
+  border-color: var(--accent-cyan);
+  background: var(--bg-tertiary);
+  box-shadow: 0 0 15px rgba(79, 195, 247, 0.4);
+  position: relative;
+}
+
+.spreadsheet-grid input.selected::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid var(--accent-cyan);
+  pointer-events: none;
+}
+
+/* Formula bar status colors */
+.formula-status.ready {
+  color: var(--accent-green);
+  border-color: var(--accent-green);
+}
+
+.formula-status.applied {
+  color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+}
+
+.formula-status.error {
+  color: var(--accent-red);
+  border-color: var(--accent-red);
+}
+
+.formula-status.warning {
+  color: var(--accent-orange);
+  border-color: var(--accent-orange);
 }
 
 /* Alternative simpler approach - use auto placement but ensure no gaps */
