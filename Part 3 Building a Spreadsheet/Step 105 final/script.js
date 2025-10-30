@@ -149,7 +149,10 @@ const update = event => {
 
 // Global variables
 let selectedCell = null;
-let viewMode = false; // Track if we're in view mode
+let viewMode = false;
+let isSelecting = false;
+let selectionStart = null;
+let selectedRange = [];
 
 window.onload = () => {
   const container = document.getElementById("container");
@@ -208,58 +211,324 @@ window.onload = () => {
   // Add cell selection functionality
   const allInputs = document.querySelectorAll('#container input');
   
+  // DRAG SELECTION FUNCTIONALITY
   allInputs.forEach(input => {
-    input.addEventListener('focus', function() {
-      // Remove selection from previous cell
-      if (selectedCell) {
-        selectedCell.classList.remove('selected');
+    // Click selection
+    input.addEventListener('mousedown', function(e) {
+      isSelecting = true;
+      selectionStart = this;
+      clearRangeSelection();
+      
+      // Single cell selection
+      if (!e.shiftKey) {
+        if (selectedCell) {
+          selectedCell.classList.remove('selected');
+        }
+        this.classList.add('selected');
+        selectedCell = this;
+        selectedRange = [this];
       }
       
-      // Add selection to current cell
-      this.classList.add('selected');
-      selectedCell = this;
-      
-      // Clear formula bar when focusing on cells (unless in view mode)
+      // Update formula bar
       if (!viewMode) {
         formulaInput.value = '';
       }
       
-      // Update status
       formulaStatus.textContent = 'READY';
       formulaStatus.className = 'formula-status ready';
       editMode.textContent = 'READY';
     });
 
-    // Remove auto-copying on input
-    // input.addEventListener('input', function() {
-    //   if (this === selectedCell) {
-    //     formulaInput.value = this.value;
-    //   }
-    // });
+    // Drag selection
+    input.addEventListener('mouseover', function() {
+      if (isSelecting && selectionStart) {
+        clearRangeSelection();
+        highlightRange(selectionStart, this);
+      }
+    });
   });
+
+  // End drag selection
+  document.addEventListener('mouseup', () => {
+    isSelecting = false;
+  });
+
+  function clearRangeSelection() {
+    allInputs.forEach(input => {
+      input.classList.remove('range-selected');
+      input.classList.remove('range-start');
+      input.classList.remove('range-end');
+    });
+  }
+
+  function highlightRange(startCell, endCell) {
+    const startId = startCell.id;
+    const endId = endCell.id;
+    
+    const startCol = startId[0];
+    const startRow = parseInt(startId.slice(1));
+    const endCol = endId[0];
+    const endRow = parseInt(endId.slice(1));
+    
+    const minCol = Math.min(startCol.charCodeAt(0), endCol.charCodeAt(0));
+    const maxCol = Math.max(startCol.charCodeAt(0), endCol.charCodeAt(0));
+    const minRow = Math.min(startRow, endRow);
+    const maxRow = Math.max(startRow, endRow);
+    
+    selectedRange = [];
+    
+    for (let row = minRow; row <= maxRow; row++) {
+      for (let col = minCol; col <= maxCol; col++) {
+        const cellId = String.fromCharCode(col) + row;
+        const cell = document.getElementById(cellId);
+        if (cell) {
+          cell.classList.add('range-selected');
+          selectedRange.push(cell);
+          
+          // Mark start and end cells
+          if (cell === startCell) cell.classList.add('range-start');
+          if (cell === endCell) cell.classList.add('range-end');
+        }
+      }
+    }
+    
+    // Update selected cell to the end of range
+    if (selectedCell) {
+      selectedCell.classList.remove('selected');
+    }
+    endCell.classList.add('selected');
+    selectedCell = endCell;
+  }
+
+// KEYBOARD NAVIGATION - FREEDOM MOVEMENT
+document.addEventListener('keydown', function(e) {
+    if (selectedCell && ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+        e.preventDefault();
+        const currentId = selectedCell.id;
+        const col = currentId[0];
+        const row = parseInt(currentId.slice(1));
+        
+        let newCol = col;
+        let newRow = row;
+        
+        switch(e.key) {
+            case 'ArrowUp': 
+                newRow = Math.max(1, row - 1);
+                break;
+            case 'ArrowDown': 
+                newRow = Math.min(99, row + 1);
+                break;
+            case 'ArrowLeft': 
+                newCol = String.fromCharCode(Math.max('A'.charCodeAt(0), col.charCodeAt(0) - 1));
+                break;
+            case 'ArrowRight': 
+                newCol = String.fromCharCode(Math.min('J'.charCodeAt(0), col.charCodeAt(0) + 1));
+                break;
+        }
+        
+        const newCellId = newCol + newRow;
+        const newCell = document.getElementById(newCellId);
+        
+        if (newCell) {
+            // Clear any range selection
+            clearRangeSelection();
+            
+            // Remove selection from current cell
+            selectedCell.classList.remove('selected');
+            
+            // Add selection to new cell and focus it
+            newCell.classList.add('selected');
+            newCell.focus();
+            selectedCell = newCell;
+            
+            // Update formula bar if in view mode
+            if (viewMode) {
+                formulaInput.value = newCell.value;
+            }
+        }
+    }
+    
+    // SHIFT + ARROW KEYS for range selection
+    if (selectedCell && e.shiftKey && ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+        e.preventDefault();
+        if (!selectionStart) {
+            selectionStart = selectedCell;
+        }
+        
+        const currentId = selectedCell.id;
+        const col = currentId[0];
+        const row = parseInt(currentId.slice(1));
+        
+        let newCol = col;
+        let newRow = row;
+        
+        switch(e.key) {
+            case 'ArrowUp': 
+                newRow = Math.max(1, row - 1);
+                break;
+            case 'ArrowDown': 
+                newRow = Math.min(99, row + 1);
+                break;
+            case 'ArrowLeft': 
+                newCol = String.fromCharCode(Math.max('A'.charCodeAt(0), col.charCodeAt(0) - 1));
+                break;
+            case 'ArrowRight': 
+                newCol = String.fromCharCode(Math.min('J'.charCodeAt(0), col.charCodeAt(0) + 1));
+                break;
+        }
+        
+        const newCellId = newCol + newRow;
+        const newCell = document.getElementById(newCellId);
+        
+        if (newCell) {
+            clearRangeSelection();
+            highlightRange(selectionStart, newCell);
+            newCell.focus();
+        }
+    }
+    
+    // CTRL + ARROW KEYS for jumping to edges
+    if (selectedCell && e.ctrlKey && ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+        e.preventDefault();
+        const currentId = selectedCell.id;
+        const col = currentId[0];
+        const row = parseInt(currentId.slice(1));
+        
+        let newCol = col;
+        let newRow = row;
+        
+        switch(e.key) {
+            case 'ArrowUp': 
+                newRow = 1; // Jump to top
+                break;
+            case 'ArrowDown': 
+                newRow = 99; // Jump to bottom
+                break;
+            case 'ArrowLeft': 
+                newCol = 'A'; // Jump to left edge
+                break;
+            case 'ArrowRight': 
+                newCol = 'J'; // Jump to right edge
+                break;
+        }
+        
+        const newCellId = newCol + newRow;
+        const newCell = document.getElementById(newCellId);
+        
+        if (newCell) {
+            clearRangeSelection();
+            selectedCell.classList.remove('selected');
+            newCell.classList.add('selected');
+            newCell.focus();
+            selectedCell = newCell;
+        }
+    }
+    
+    // TAB KEY for horizontal navigation
+    if (e.key === 'Tab' && selectedCell) {
+        e.preventDefault();
+        const currentId = selectedCell.id;
+        const col = currentId[0];
+        const row = parseInt(currentId.slice(1));
+        
+        let newCol;
+        if (e.shiftKey) {
+            // Shift+Tab - move left
+            newCol = String.fromCharCode(Math.max('A'.charCodeAt(0), col.charCodeAt(0) - 1));
+        } else {
+            // Tab - move right
+            newCol = String.fromCharCode(Math.min('J'.charCodeAt(0), col.charCodeAt(0) + 1));
+        }
+        
+        const newCellId = newCol + row;
+        const newCell = document.getElementById(newCellId);
+        
+        if (newCell) {
+            clearRangeSelection();
+            selectedCell.classList.remove('selected');
+            newCell.classList.add('selected');
+            newCell.focus();
+            selectedCell = newCell;
+        }
+    }
+    
+    // ENTER KEY for vertical navigation (like Excel)
+    if (e.key === 'Enter' && selectedCell && document.activeElement === selectedCell) {
+        e.preventDefault();
+        const currentId = selectedCell.id;
+        const col = currentId[0];
+        const row = parseInt(currentId.slice(1));
+        
+        let newRow;
+        if (e.shiftKey) {
+            // Shift+Enter - move up
+            newRow = Math.max(1, row - 1);
+        } else {
+            // Enter - move down (Excel behavior)
+            newRow = Math.min(99, row + 1);
+        }
+        
+        const newCellId = col + newRow;
+        const newCell = document.getElementById(newCellId);
+        
+        if (newCell) {
+            clearRangeSelection();
+            selectedCell.classList.remove('selected');
+            newCell.classList.add('selected');
+            newCell.focus();
+            selectedCell = newCell;
+        }
+    }
+    
+    // Existing shortcuts (keep these at the end)
+    if (e.ctrlKey && e.key === 'Enter') {
+        applyFormulaBtn.click();
+    }
+    if (e.key === 'Escape') {
+        formulaInput.value = '';
+        if (selectedCell) {
+            selectedCell.focus();
+        }
+        clearRangeSelection();
+        selectionStart = null; // Reset range selection
+        if (viewMode) {
+            viewCellBtn.innerHTML = '[VIEW]';
+            viewCellBtn.classList.remove('active');
+            viewMode = false;
+        }
+        formulaStatus.textContent = 'CANCELLED';
+        formulaStatus.className = 'formula-status warning';
+        setTimeout(() => {
+            formulaStatus.textContent = 'READY';
+            formulaStatus.className = 'formula-status ready';
+        }, 1000);
+    }
+    if (e.key === 'Enter' && document.activeElement === formulaInput) {
+        applyFormulaBtn.click();
+    }
+});
 
   // VIEW button functionality
   viewCellBtn.addEventListener('click', function() {
     if (selectedCell) {
-      // In the VIEW button click event, replace the style changes with:
       if (!viewMode) {
-          // Enter view mode
-          formulaInput.value = selectedCell.value;
-          formulaStatus.textContent = 'VIEWING';
-          formulaStatus.className = 'formula-status warning';
-          editMode.textContent = 'VIEW_MODE';
-          viewCellBtn.innerHTML = '[EDIT]';
-          viewCellBtn.classList.add('active');  // Changed from 'view-active' to 'active'
-          viewMode = true;
+        // Enter view mode
+        formulaInput.value = selectedCell.value;
+        formulaStatus.textContent = 'VIEWING';
+        formulaStatus.className = 'formula-status warning';
+        editMode.textContent = 'VIEW_MODE';
+        viewCellBtn.innerHTML = '[EDIT]';
+        viewCellBtn.classList.add('active');
+        viewMode = true;
       } else {
-          // Exit view mode
-          formulaInput.value = '';
-          formulaStatus.textContent = 'READY';
-          formulaStatus.className = 'formula-status ready';
-          editMode.textContent = 'READY';
-          viewCellBtn.innerHTML = '[VIEW]';
-          viewCellBtn.classList.remove('active');  // Changed from 'view-active' to 'active'
-          viewMode = false;
+        // Exit view mode
+        formulaInput.value = '';
+        formulaStatus.textContent = 'READY';
+        formulaStatus.className = 'formula-status ready';
+        editMode.textContent = 'READY';
+        viewCellBtn.innerHTML = '[VIEW]';
+        viewCellBtn.classList.remove('active');
+        viewMode = false;
       }
     } else {
       formulaStatus.textContent = 'NO_CELL';
@@ -301,8 +570,14 @@ window.onload = () => {
           result = formula;
         }
         
-        // Apply to selected cell
-        selectedCell.value = result;
+        // Apply to selected cell (or range if multiple selected)
+        if (selectedRange.length > 1) {
+          selectedRange.forEach(cell => {
+            cell.value = result;
+          });
+        } else {
+          selectedCell.value = result;
+        }
         
         formulaStatus.textContent = 'APPLIED';
         formulaStatus.className = 'formula-status applied';
@@ -312,8 +587,7 @@ window.onload = () => {
         if (viewMode) {
           formulaInput.value = '';
           viewCellBtn.innerHTML = '[VIEW]';
-          viewCellBtn.style.background = '';
-          viewCellBtn.style.borderColor = '';
+          viewCellBtn.classList.remove('active');
           viewMode = false;
         }
         
@@ -341,34 +615,7 @@ window.onload = () => {
     }
   });
 
-  // Keyboard shortcuts
-  document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.key === 'Enter') {
-      applyFormulaBtn.click();
-    }
-    if (e.key === 'Escape') {
-      formulaInput.value = '';
-      if (selectedCell) {
-        selectedCell.focus();
-      }
-      // Exit view mode on escape
-      if (viewMode) {
-        viewCellBtn.innerHTML = '[VIEW]';
-        viewCellBtn.style.background = '';
-        viewCellBtn.style.borderColor = '';
-        viewMode = false;
-      }
-      formulaStatus.textContent = 'CANCELLED';
-      formulaStatus.className = 'formula-status warning';
-      setTimeout(() => {
-        formulaStatus.textContent = 'READY';
-        formulaStatus.className = 'formula-status ready';
-      }, 1000);
-    }
-    if (e.key === 'Enter' && document.activeElement === formulaInput) {
-      applyFormulaBtn.click();
-    }
-  });
+
 
   // Auto-focus first cell
   if (allInputs.length > 0) {

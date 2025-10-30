@@ -649,6 +649,7 @@ body {
 
 .formula-input::placeholder {
   color: var(--text-dim);
+  opacity: 0.7;
 }
 
 .terminal-btn {
@@ -772,3 +773,35 @@ body {
   background: var(--accent-cyan);
 }
 
+/* Add to your existing styles.css - Range selection styles */
+.spreadsheet-grid input.range-selected {
+  background: var(--accent-purple);
+  color: var(--bg-primary);
+  border-color: var(--accent-pink);
+  position: relative;
+}
+
+.spreadsheet-grid input.range-start {
+  border-left: 3px solid var(--accent-green) !important;
+  border-top: 3px solid var(--accent-green) !important;
+}
+
+.spreadsheet-grid input.range-end {
+  border-right: 3px solid var(--accent-cyan) !important;
+  border-bottom: 3px solid var(--accent-cyan) !important;
+}
+
+.spreadsheet-grid input.range-selected:hover {
+  background: var(--accent-pink);
+  border-color: var(--accent-purple);
+}
+
+/* Update the existing .selected style to work with range selection */
+.spreadsheet-grid input.selected {
+  border-color: var(--accent-cyan);
+  background: var(--bg-tertiary);
+  box-shadow: 0 0 15px rgba(79, 195, 247, 0.4);
+  position: relative;
+  z-index: 2;
+  /* Ensure selected cell appears above range selection */
+}
