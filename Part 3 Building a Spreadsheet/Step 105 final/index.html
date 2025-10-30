@@ -4,11 +4,118 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Functional Programming Spreadsheet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>SPREADSHEET_APP</title>
   </head>
   <body>
-    <div id="container">
-      <div></div>
+    <div class="terminal">
+      <header class="terminal-header">
+        <div class="window-controls">
+          <span class="control close"></span>
+          <span class="control minimize"></span>
+          <span class="control maximize"></span>
+        </div>
+        <div class="title-bar">
+          <span class="prompt">></span>
+          <span class="title">SPREADSHEET_APP</span>
+          <span class="cursor">_</span>
+        </div>
+      </header>
+
+      <main class="terminal-body">
+        <div class="app-header">
+          <h1 class="app-title">~/data/spreadsheet</h1>
+          <div class="status-bar">
+            <span class="status-item">READY</span>
+            <span class="status-item">v2.5.1</span>
+            <span class="status-item">UTF-8</span>
+          </div>
+        </div>
+
+        <div class="spreadsheet-info">
+          <div class="info-panel">
+            <div class="info-header">
+              <span class="info-title">FUNCTIONS_AVAILABLE</span>
+            </div>
+            <div class="info-content">
+              <div class="function-list">
+                <div class="function-item">
+                  <span class="function-name">SUM</span>
+                  <span class="function-desc">Sum of values</span>
+                </div>
+                <div class="function-item">
+                  <span class="function-name">AVERAGE</span>
+                  <span class="function-desc">Mean average</span>
+                </div>
+                <div class="function-item">
+                  <span class="function-name">MEDIAN</span>
+                  <span class="function-desc">Middle value</span>
+                </div>
+                <div class="function-item">
+                  <span class="function-name">EVEN</span>
+                  <span class="function-desc">Filter even numbers</span>
+                </div>
+                <div class="function-item">
+                  <span class="function-name">RANGE</span>
+                  <span class="function-desc">Create number range</span>
+                </div>
+                <div class="function-item">
+                  <span class="function-name">NODUPES</span>
+                  <span class="function-desc">Remove duplicates</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-panel">
+            <div class="info-header">
+              <span class="info-title">CELL_REFERENCE</span>
+            </div>
+            <div class="info-content">
+              <div class="reference-guide">
+                <div class="ref-item">
+                  <span class="ref-example">=A1+B2</span>
+                  <span class="ref-desc">Basic arithmetic</span>
+                </div>
+                <div class="ref-item">
+                  <span class="ref-example">=SUM(A1:A10)</span>
+                  <span class="ref-desc">Range sum</span>
+                </div>
+                <div class="ref-item">
+                  <span class="ref-example">=AVERAGE(A1,B2,C3)</span>
+                  <span class="ref-desc">Multiple cells</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="spreadsheet-container">
+          <div id="container" class="spreadsheet-grid"></div>
+        </div>
+
+        <div class="formula-bar">
+          <div class="formula-header">
+            <span class="formula-title">FORMULA_BAR</span>
+            <span class="formula-status">READY</span>
+          </div>
+          <div class="formula-input-container">
+            <span class="formula-prompt">=</span>
+            <input type="text" id="formula-input" class="formula-input" placeholder="Enter formula (e.g., =SUM(A1:A10))" />
+            <button id="apply-formula" class="terminal-btn primary">
+              <span class="btn-text">[APPLY]</span>
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <footer class="terminal-footer">
+        <div class="footer-stats">
+          <span class="stat">CELLS: <span id="cell-count">0</span>/990</span>
+          <span class="stat">MODE: <span id="edit-mode">READY</span></span>
+          <span class="stat">RANGE: A1-J99</span>
+        </div>
+      </footer>
     </div>
     <script src="./script.js"></script>
   </body>

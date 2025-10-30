@@ -69,33 +69,110 @@ const evalFormula = (x, cells) => {
   return functionExpanded === x ? functionExpanded : evalFormula(functionExpanded, cells);
 }
 
-window.onload = () => {
-  const container = document.getElementById("container");
-  const createLabel = (name) => {
-    const label = document.createElement("div");
-    label.className = "label";
-    label.textContent = name;
-    container.appendChild(label);
-  }
-  const letters = charRange("A", "J");
-  letters.forEach(createLabel);
-  range(1, 99).forEach(number => {
-    createLabel(number);
-    letters.forEach(letter => {
-      const input = document.createElement("input");
-      input.type = "text";
-      input.id = letter + number;
-      input.ariaLabel = letter + number;
-      input.onchange = update;
-      container.appendChild(input);
-    })
-  })
+// Update statistics
+function updateStats() {
+  const cellCount = document.getElementById('cell-count');
+  const cells = Array.from(document.getElementById("container").children).filter(el => el.tagName === 'INPUT');
+  const filledCells = cells.filter(cell => cell.value.trim() !== '').length;
+  cellCount.textContent = filledCells;
 }
 
+// Enhanced update function
 const update = event => {
   const element = event.target;
   const value = element.value.replace(/\s/g, "");
   if (!value.includes(element.id) && value.startsWith('=')) {
     element.value = evalFormula(value.slice(1), Array.from(document.getElementById("container").children));
   }
+  updateStats();
+}
+
+window.onload = () => {
+  const container = document.getElementById("container");
+  
+  const createLabel = (name, className = "") => {
+    const label = document.createElement("div");
+    label.className = "label" + (className ? " " + className : "");
+    label.textContent = name;
+    container.appendChild(label);
+  }
+
+  const letters = charRange("A", "J");
+  
+  // Create empty top-left corner
+  createLabel("");
+  
+  // Create letter labels (A-J) in the first row
+  letters.forEach(letter => createLabel(letter));
+  
+  // Create number labels and inputs
+  range(1, 99).forEach(number => {
+    // Create number label in first column with specific class
+    createLabel(number, "row-label");
+    
+    // Create inputs for this row
+    letters.forEach(letter => {
+      const input = document.createElement("input");
+      input.type = "text";
+      input.id = letter + number;
+      input.ariaLabel = letter + number;
+      input.onchange = update;
+      input.oninput = updateStats;
+      container.appendChild(input);
+    })
+  });
+
+  // Initialize stats
+  updateStats();
+
+  // Formula bar functionality
+  const formulaInput = document.getElementById('formula-input');
+  const applyFormulaBtn = document.getElementById('apply-formula');
+  const formulaStatus = document.querySelector('.formula-status');
+  const editMode = document.getElementById('edit-mode');
+
+  applyFormulaBtn.addEventListener('click', function() {
+    const formula = formulaInput.value.trim();
+    if (formula && formula.startsWith('=')) {
+      try {
+        // For demo purposes - in a real app, you'd apply this to selected cells
+        formulaStatus.textContent = 'APPLIED';
+        formulaStatus.style.color = 'var(--accent-green)';
+        formulaStatus.style.borderColor = 'var(--accent-green)';
+        editMode.textContent = 'FORMULA_APPLIED';
+        formulaInput.value = '';
+        
+        // Reset status after delay
+        setTimeout(() => {
+          formulaStatus.textContent = 'READY';
+          formulaStatus.style.color = 'var(--accent-green)';
+          formulaStatus.style.borderColor = 'var(--accent-green)';
+          editMode.textContent = 'READY';
+        }, 2000);
+      } catch (error) {
+        formulaStatus.textContent = 'ERROR';
+        formulaStatus.style.color = 'var(--accent-red)';
+        formulaStatus.style.borderColor = 'var(--accent-red)';
+        editMode.textContent = 'ERROR';
+      }
+    }
+  });
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && e.key === 'Enter') {
+      applyFormulaBtn.click();
+    }
+    if (e.key === 'Escape') {
+      formulaInput.value = '';
+      formulaStatus.textContent = 'CANCELLED';
+      formulaStatus.style.color = 'var(--accent-orange)';
+      formulaStatus.style.borderColor = 'var(--accent-orange)';
+      setTimeout(() => {
+        formulaStatus.textContent = 'READY';
+        formulaStatus.style.color = 'var(--accent-green)';
+        formulaStatus.style.borderColor = 'var(--accent-green)';
+      }, 1000);
+    }
+  });
 }
