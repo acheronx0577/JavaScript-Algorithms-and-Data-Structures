@@ -35,7 +35,7 @@ body {
 .terminal {
     background: var(--bg-primary);
     border: 1px solid var(--terminal-gold);
-    border-radius: 8px;
+    border-radius: 0px;
     box-shadow: var(--shadow-glow), 0 10px 30px rgba(0, 0, 0, 0.5);
     max-width: 900px;
     width: 100%;
@@ -59,7 +59,7 @@ body {
 .control {
     width: 12px;
     height: 12px;
-    border-radius: 50%;
+    border-radius: 0px;
     display: inline-block;
 }
 
@@ -136,7 +136,7 @@ body {
 .status-item {
     background: var(--bg-tertiary);
     padding: 4px 8px;
-    border-radius: 4px;
+    border-radius: 0px;
     font-size: 0.8em;
     color: var(--terminal-green);
     border: 1px solid var(--text-dim);
@@ -174,7 +174,7 @@ body {
 .terminal-input {
     background: var(--bg-secondary);
     border: 1px solid var(--bg-tertiary);
-    border-radius: 4px;
+    border-radius: 0px;
     padding: 12px;
     color: var(--text-primary);
     font-family: inherit;
@@ -202,7 +202,7 @@ body {
 .meal-section {
     background: var(--bg-secondary);
     border: 1px solid var(--bg-tertiary);
-    border-radius: 6px;
+    border-radius: 0px;
     padding: 16px;
     transition: all 0.3s ease;
 }
@@ -242,7 +242,7 @@ body {
 .controls-panel {
     background: var(--bg-secondary);
     border: 1px solid var(--bg-tertiary);
-    border-radius: 6px;
+    border-radius: 0px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -265,7 +265,7 @@ body {
 .terminal-select {
     background: var(--bg-primary);
     border: 1px solid var(--bg-tertiary);
-    border-radius: 4px;
+    border-radius: 0px;
     padding: 8px 12px;
     color: var(--text-primary);
     font-family: inherit;
@@ -288,7 +288,7 @@ body {
 .terminal-btn {
     background: var(--bg-tertiary);
     border: 1px solid var(--bg-tertiary);
-    border-radius: 4px;
+    border-radius: 0px;
     padding: 12px 20px;
     color: var(--text-primary);
     font-family: inherit;
@@ -329,7 +329,7 @@ body {
 .output-panel {
     background: var(--bg-secondary);
     border: 1px solid var(--terminal-gold);
-    border-radius: 6px;
+    border-radius: 0px;
     margin-top: 20px;
     box-shadow: var(--shadow-glow);
 }
@@ -354,7 +354,7 @@ body {
     font-size: 0.8em;
     background: rgba(0, 255, 0, 0.1);
     padding: 4px 8px;
-    border-radius: 4px;
+    border-radius: 0px;
 }
 
 .output-content {
@@ -457,9 +457,17 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background: var(--terminal-gold);
-    border-radius: 4px;
+    border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #ffed4a;
 }
+
+/* Remove default number input spinner */
+.terminal-input[type="number"]::-webkit-outer-spin-button,
+.terminal-input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
