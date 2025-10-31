@@ -75,7 +75,7 @@ Through this course, I learned:
 | 🔢 [**Number Sorter**](https://github.com/acheronx0577/JavaScript-Building-a-Number-Sorter) | Learn Basic Algorithmic Thinking by Building a Number Sorter | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Number-Sorter) | ✅Completed |
 | 📊 [**Statistics Calculator**](https://github.com/acheronx0577/JavaScript-Building-a-Statistics-Calculator) | Learn Advanced Array Methods by Building a Statistics Calculator | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Statistics-Calculator) | ✅Completed |
 | 📈 [**Spreadsheet**](https://github.com/acheronx0577/JavaScript-Building-a-Spreadsheet) | Learn Functional Programming by Building a Spreadsheet | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Spreadsheet) | ✅Completed |
-| 📞 [**Telephone Number Validator (Certification Project)**](https://github.com/acheronx0577/JavaScript-Build-a-Telephone-Number-Validator) | **Certification Project**: Build a Telephone Number Validator | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Build-a-Telephone-Number-Validator) | ⌛ In Progress |
+| 📞 [**Telephone Number Validator (Certification Project)**](https://github.com/acheronx0577/JavaScript-Build-a-Telephone-Number-Validator) | **Certification Project**: Build a Telephone Number Validator | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Build-a-Telephone-Number-Validator) | ✅Completed |
 
 ---
 
