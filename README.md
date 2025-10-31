@@ -49,7 +49,7 @@ Through this course, I learned:
 | 🧱 Course Project Part 1 | 💡 Description | 🌐 Live Demo | 📊 Status |
 |------------------|----------------|---------------|------------|
 | 🏛️ [**Introductory JavaScript**](https://github.com/acheronx0577/JavaScript-Building-a-Pyramid-Generator) | Build a Pyramid Generator | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Pyramid-Generator) | ✅Completed |
-| 🧮 [**Gradebook App**](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Gradebook%20App.js) | Review JS fundamentals and averages | ▶️ [Link](https://github.com/acheronx0577/JavaScript-Algorithms-and-Data-Structures/tree/main/Building%20a%20Gradebook%20App.js) | ✅Completed |
+| 🧮 [**Gradebook App**](https://github.com/acheronx0577/JavaScript-Building-a-Gradebook-App) | Review JS fundamentals and averages | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Gradebook-App) | ✅Completed |
 | ⚔️ [**Role Playing Game**](https://github.com/acheronx0577/JavaScript-Role-Play-Game) | Learn basic JavaScript by building a small RPG | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Role-Play-Game) | ✅Completed |
 | 🎨 [**Random Background Color Changer**](https://github.com/acheronx0577/JavaScript-Random-Background-Color-Changer) | Debugging practice & randomization | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Random-Background-Color-Changer) | ✅Completed |
 | 🍎 [**Calorie Counter**](https://github.com/acheronx0577/JavaScript-Building-a-Calorie-Counter) | Form validation and DOM updates | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Calorie-Counter) | ✅Completed |
@@ -74,7 +74,7 @@ Through this course, I learned:
 | 🔍 [**Spam Filter**](https://github.com/acheronx0577/JavaScript-Building-a-Spam-Filter) | Learn Regular Expressions by Building a Spam Filter | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Spam-Filter) | ✅Completed |
 | 🔢 [**Number Sorter**](https://github.com/acheronx0577/JavaScript-Building-a-Number-Sorter) | Learn Basic Algorithmic Thinking by Building a Number Sorter | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Number-Sorter) | ✅Completed |
 | 📊 [**Statistics Calculator**](https://github.com/acheronx0577/JavaScript-Building-a-Statistics-Calculator) | Learn Advanced Array Methods by Building a Statistics Calculator | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Statistics-Calculator) | ✅Completed |
-| 📈 [**Spreadsheet**](https://github.com/acheronx0577/JavaScript-Building-a-Spreadsheet) | Learn Functional Programming by Building a Spreadsheet | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Spreadsheet) | ⌛ In Progress |
+| 📈 [**Spreadsheet**](https://github.com/acheronx0577/JavaScript-Building-a-Spreadsheet) | Learn Functional Programming by Building a Spreadsheet | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Spreadsheet) | ✅Completed |
 | 📞 [**Telephone Number Validator (Certification Project)**](https://github.com/acheronx0577/JavaScript-Build-a-Telephone-Number-Validator-Project) | **Certification Project**: Build a Telephone Number Validator | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Build-a-Telephone-Number-Validator-Project) | ⌛ In Progress |
 
 ---
