@@ -11,6 +11,8 @@ let cid = [
   ['ONE HUNDRED', 100]
 ];
 
+let transactionCount = 0;
+
 // Currency units and their values in descending order
 const currencyUnits = [
   ["ONE HUNDRED", 100],
@@ -26,21 +28,25 @@ const currencyUnits = [
 
 // Initialize the app
 document.addEventListener('DOMContentLoaded', function() {
-  // Set initial price value
   document.getElementById('price').value = price;
-  
-  // Display initial cash in drawer
   displayCID();
-  
-  // Add event listener to purchase button
+  updateDrawerTotal();
+  updateTransactionCount();
+
   document.getElementById('purchase-btn').addEventListener('click', handlePurchase);
+  document.getElementById('clear-btn').addEventListener('click', clearInputs);
+
+  document.getElementById('cash').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      handlePurchase();
+    }
+  });
 });
 
 // Display cash in drawer
 function displayCID() {
   const cidDisplay = document.getElementById('cid-display');
   cidDisplay.innerHTML = '';
-  
   cid.forEach(item => {
     const div = document.createElement('div');
     div.className = 'cid-item';
@@ -52,132 +58,189 @@ function displayCID() {
   });
 }
 
+// Update drawer total
+function updateDrawerTotal() {
+  const total = cid.reduce((sum, item) => sum + item[1], 0);
+  document.getElementById('drawer-total').textContent = `Total: $${total.toFixed(2)}`;
+}
+
+// Update transaction count
+function updateTransactionCount() {
+  document.getElementById('transaction-count').textContent = transactionCount;
+}
+
+// Clear inputs
+function clearInputs() {
+  document.getElementById('cash').value = '';
+  document.getElementById('change-due').innerHTML =
+    '<div class="placeholder">Transaction results will appear here...</div>';
+  document.getElementById('change-due').className = 'results-content';
+  document.getElementById('results-status').textContent = 'READY';
+  document.getElementById('status').textContent = 'AWAITING_TRANSACTION';
+  document.getElementById('cash').focus();
+}
+
 // Handle purchase button click
 function handlePurchase() {
   const cashInput = document.getElementById('cash');
   const cash = parseFloat(cashInput.value);
   const changeDueElement = document.getElementById('change-due');
-  
-  // Validate inputs
-  if (isNaN(cash)) {
+  const resultsStatus = document.getElementById('results-status');
+  const statusElement = document.getElementById('status');
+
+  if (isNaN(cash) || cash === '') {
     alert("Please enter a valid cash amount");
+    cashInput.focus();
     return;
   }
-  
+
+  if (cash < 0) {
+    alert("Cash amount cannot be negative");
+    cashInput.focus();
+    return;
+  }
+
   if (cash < price) {
     alert("Customer does not have enough money to purchase the item");
+    cashInput.focus();
     return;
   }
-  
+
   if (cash === price) {
     changeDueElement.textContent = "No change due - customer paid with exact cash";
-    changeDueElement.className = '';
+    changeDueElement.className = 'results-content valid';
+    resultsStatus.textContent = 'EXACT_CASH';
+    statusElement.textContent = 'COMPLETED';
+    transactionCount++;
+    updateTransactionCount();
     return;
   }
-  
-  // Calculate change
+
   const changeDue = cash - price;
   const result = checkCashRegister(price, cash, cid);
-  
-  // Display result
-  displayResult(result, changeDueElement);
+
+  displayResult(result, changeDueElement, resultsStatus, statusElement);
+
+  if (result.status === "OPEN" || result.status === "CLOSED") {
+    transactionCount++;
+    updateTransactionCount();
+  }
 }
 
 // Main cash register function
 function checkCashRegister(price, cash, cid) {
-  let changeDue = cash - price;
-  let totalCID = 0;
-  
-  // Calculate total cash in drawer
-  for (let i = 0; i < cid.length; i++) {
-    totalCID += cid[i][1];
-  }
+  let changeDue = Math.round((cash - price) * 100) / 100;
+
+  let totalCID = cid.reduce((sum, item) => sum + item[1], 0);
   totalCID = Math.round(totalCID * 100) / 100;
-  
-  // Create a copy of CID for processing
-  let cidCopy = JSON.parse(JSON.stringify(cid));
-  
+
   if (changeDue > totalCID) {
     return { status: "INSUFFICIENT_FUNDS", change: [] };
   }
-  
+
+  // ✅ FIXED: handle CLOSED case properly (lowest to highest)
   if (changeDue === totalCID) {
-    return { status: "CLOSED", change: cid.slice().reverse() };
+    const closedChange = cid.map(item => [item[0], item[1]]);
+    return { status: "CLOSED", change: closedChange };
   }
 
-  
-  // Calculate change
   const change = [];
   let remainingChange = changeDue;
-  
+  const cidCopy = JSON.parse(JSON.stringify(cid));
+
   for (let i = 0; i < currencyUnits.length; i++) {
     const [unit, value] = currencyUnits[i];
     const cidIndex = findCIDIndex(cidCopy, unit);
-    
     if (cidIndex === -1) continue;
-    
+
     const availableAmount = cidCopy[cidIndex][1];
-    const maxUnits = Math.floor(availableAmount / value);
+    const maxUnitsFromDrawer = Math.floor(availableAmount / value);
     const neededUnits = Math.floor(remainingChange / value);
-    const unitsToUse = Math.min(maxUnits, neededUnits);
-    
+
+    const unitsToUse = Math.min(maxUnitsFromDrawer, neededUnits);
     if (unitsToUse > 0) {
-      const amount = unitsToUse * value;
+      const amount = Math.round(unitsToUse * value * 100) / 100;
       change.push([unit, amount]);
       remainingChange = Math.round((remainingChange - amount) * 100) / 100;
       cidCopy[cidIndex][1] = Math.round((availableAmount - amount) * 100) / 100;
     }
+
+    if (remainingChange === 0) break;
   }
-  
+
   if (remainingChange > 0) {
     return { status: "INSUFFICIENT_FUNDS", change: [] };
   }
-  
+
+  change.sort((a, b) => {
+    const valA = currencyUnits.find(u => u[0] === a[0])[1];
+    const valB = currencyUnits.find(u => u[0] === b[0])[1];
+    return valB - valA;
+  });
+
+
   return { status: "OPEN", change: change };
 }
 
-// Helper function to find index in CID array
+// Helper function
 function findCIDIndex(cid, currency) {
   for (let i = 0; i < cid.length; i++) {
-    if (cid[i][0] === currency) {
-      return i;
-    }
+    if (cid[i][0] === currency) return i;
   }
   return -1;
 }
 
-// Display the result
-function displayResult(result, element) {
+// Display result
+function displayResult(result, element, resultsStatus, statusElement) {
   element.innerHTML = '';
-  
-  const statusDiv = document.createElement('div');
-  statusDiv.textContent = `Status: ${result.status}`;
-  
+
   if (result.status === "INSUFFICIENT_FUNDS") {
-    statusDiv.className = 'status-insufficient';
-    element.appendChild(statusDiv);
+    element.textContent = "Status: INSUFFICIENT_FUNDS";
+    element.className = 'results-content invalid';
+    resultsStatus.textContent = 'INSUFFICIENT_FUNDS';
+    statusElement.textContent = 'FAILED';
+
   } else if (result.status === "CLOSED") {
-    statusDiv.className = 'status-closed';
-    element.appendChild(statusDiv);
-    
+    let output = "Status: CLOSED";
     result.change.forEach(item => {
       if (item[1] > 0) {
-        const changeItem = document.createElement('div');
-        changeItem.textContent = `${item[0]}: $${item[1].toFixed(2)}`;
-        element.appendChild(changeItem);
+        output += `<br>${item[0]}: $${item[1].toFixed(2)}`;
       }
     });
+    element.innerHTML = output;
+    element.className = 'results-content valid';
+    resultsStatus.textContent = 'CLOSED';
+    statusElement.textContent = 'COMPLETED';
+    updateCashDrawerForClosed();
   } else if (result.status === "OPEN") {
-    statusDiv.className = 'status-open';
-    element.appendChild(statusDiv);
-    
+    let output = "Status: OPEN";
     result.change.forEach(item => {
-      const changeItem = document.createElement('div');
-      changeItem.textContent = `${item[0]}: $${item[1].toFixed(2)}`;
-      element.appendChild(changeItem);
+      if (item[1] > 0) {
+        output += `<br>${item[0]}: $${item[1].toFixed(2)}`;
+      }
     });
+    element.innerHTML = output;
+    element.className = 'results-content valid';
+    resultsStatus.textContent = 'OPEN';
+    statusElement.textContent = 'COMPLETED';
+    updateCashDrawer(result.change);
   }
-  
-  // Update the displayed cash drawer
+
   displayCID();
+  updateDrawerTotal();
+}
+
+// Empty drawer for CLOSED
+function updateCashDrawerForClosed() {
+  cid.forEach(item => { item[1] = 0; });
+}
+
+// Update drawer after OPEN transaction
+function updateCashDrawer(changeArray) {
+  changeArray.forEach(changeItem => {
+    const index = findCIDIndex(cid, changeItem[0]);
+    if (index !== -1) {
+      cid[index][1] = Math.round((cid[index][1] - changeItem[1]) * 100) / 100;
+    }
+  });
 }
