@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TERMINAL_STORE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal-window">
+        <!-- Terminal Header -->
+        <div class="terminal-header">
+            <div class="window-controls">
+                <div class="control-btn close"></div>
+                <div class="control-btn minimize"></div>
+                <div class="control-btn maximize"></div>
+            </div>
+            <div class="terminal-title">
+                <span class="prompt-symbol">$</span>
+                <span class="title-text">terminal_store --cart-system</span>
+                <span class="cursor-blink">_</span>
+            </div>
+        </div>
+
+        <!-- Terminal Body -->
+        <div class="terminal-body">
+            <!-- Status Bar -->
+            <div class="status-bar">
+                <div class="status-item">
+                    <span class="status-label">ITEMS:</span>
+                    <span id="total-items" class="status-value">0</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">TOTAL:</span>
+                    <span id="total-price" class="status-value">$0.00</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">CART:</span>
+                    <span id="cart-status" class="status-value">HIDDEN</span>
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="main-grid">
+                <!-- Products Panel -->
+                <div class="products-panel">
+                    <div class="panel-header">
+                        <span class="header-title">AVAILABLE_PRODUCTS</span>
+                        <span class="header-stats">
+                            ITEMS: <span id="products-count">12</span>
+                        </span>
+                    </div>
+                    <div id="products-container" class="products-grid">
+                        <!-- Products will be generated here -->
+                    </div>
+                </div>
+
+                <!-- Cart Panel -->
+                <div class="cart-panel">
+                    <div class="panel-header">
+                        <span class="header-title">SHOPPING_CART</span>
+                        <div class="cart-controls">
+                            <button id="toggle-cart" class="tui-btn small">
+                                <span class="btn-icon">👁</span>
+                                TOGGLE
+                            </button>
+                            <button id="clear-cart" class="tui-btn small danger">
+                                <span class="btn-icon">🗑</span>
+                                CLEAR
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div id="cart-container" class="cart-content">
+                        <div class="cart-items" id="cart-items">
+                            <div class="empty-cart">CART_IS_EMPTY</div>
+                        </div>
+                        
+                        <div class="cart-summary">
+                            <div class="summary-item">
+                                <span class="summary-label">SUBTOTAL:</span>
+                                <span id="subtotal" class="summary-value">$0.00</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">TAX (8.25%):</span>
+                                <span id="taxes" class="summary-value">$0.00</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span class="summary-label">TOTAL:</span>
+                                <span id="total" class="summary-value">$0.00</span>
+                            </div>
+                        </div>
+
+                        <div class="cart-actions">
+                            <button id="checkout-btn" class="tui-btn primary full-width">
+                                <span class="btn-icon">💰</span>
+                                PROCEED_TO_CHECKOUT
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Panel -->
+            <div class="info-panel">
+                <div class="panel-header">
+                    <span class="header-title">STORE_INFO</span>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">STORE:</span>
+                        <span class="info-value">TERMINAL_BAKERY</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">CATEGORIES:</span>
+                        <span class="info-value">6</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">ITEMS_IN_STOCK:</span>
+                        <span class="info-value">12</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">VERSION:</span>
+                        <span class="info-value">v2.1.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terminal Footer -->
+        <div class="terminal-footer">
+            <div class="footer-content">
+                <span class="footer-text">STATUS: <span id="global-status">READY</span></span>
+                <span class="footer-text">THEME: CYBER_DARK</span>
+                <span class="footer-text">SESSION: ACTIVE</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
