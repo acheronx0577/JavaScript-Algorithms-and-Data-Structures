@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>ADVANCED_DICE_GAME</title>
+</head>
+<body>
+    <div class="terminal">
+        <header class="terminal-header">
+            <div class="window-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="title-bar">
+                <span class="prompt">></span>
+                <span class="title">ADVANCED_DICE_GAME</span>
+                <span class="cursor">_</span>
+            </div>
+        </header>
+
+        <main class="terminal-body">
+            <div class="app-header">
+                <h1 class="app-title">~/games/dice_game</h1>
+                <div class="status-bar">
+                    <span class="status-item">ACTIVE</span>
+                    <span class="status-item">v2.0.0</span>
+                    <span class="status-item">UTF-8</span>
+                </div>
+            </div>
+
+            <!-- Dice Display -->
+            <div class="dice-section">
+                <div class="section-title">
+                    <span>DICE_ROLLER</span>
+                    <span style="color: var(--text-dim); font-size: 0.8em;">[click_to_hold]</span>
+                </div>
+                <div class="dice-container" id="dice">
+                    <div class="die" data-index="0">0</div>
+                    <div class="die" data-index="1">0</div>
+                    <div class="die" data-index="2">0</div>
+                    <div class="die" data-index="3">0</div>
+                    <div class="die" data-index="4">0</div>
+                </div>
+            </div>
+
+            <!-- Game Stats -->
+            <div class="game-stats">
+                <div class="stat-card">
+                    <div class="stat-label">CURRENT_ROUND</div>
+                    <div class="stat-value" id="current-round">1</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">ROLLS_REMAINING</div>
+                    <div class="stat-value highlight" id="current-round-rolls">3</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">TOTAL_SCORE</div>
+                    <div class="stat-value" id="total-score">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">GAME_STATUS</div>
+                    <div class="stat-value" id="game-status">READY</div>
+                </div>
+            </div>
+
+            <!-- Score Options -->
+            <div class="score-options">
+                <div class="section-title">SCORE_OPTIONS</div>
+                <div class="options-grid" id="score-options">
+                    <div class="option-item" data-option="three-of-a-kind">
+                        <input type="radio" name="score-options" id="three-of-a-kind" class="option-input" value="three-of-a-kind" disabled />
+                        <label for="three-of-a-kind" class="option-label">
+                            <span class="option-name">Three of a kind</span>
+                            <span class="option-score"></span>
+                        </label>
+                    </div>
+                    <div class="option-item" data-option="four-of-a-kind">
+                        <input type="radio" name="score-options" id="four-of-a-kind" class="option-input" value="four-of-a-kind" disabled />
+                        <label for="four-of-a-kind" class="option-label">
+                            <span class="option-name">Four of a kind</span>
+                            <span class="option-score"></span>
+                        </label>
+                    </div>
+                    <div class="option-item" data-option="full-house">
+                        <input type="radio" name="score-options" id="full-house" class="option-input" value="full-house" disabled />
+                        <label for="full-house" class="option-label">
+                            <span class="option-name">Full house</span>
+                            <span class="option-score"></span>
+                        </label>
+                    </div>
+                    <div class="option-item" data-option="small-straight">
+                        <input type="radio" name="score-options" id="small-straight" class="option-input" value="small-straight" disabled />
+                        <label for="small-straight" class="option-label">
+                            <span class="option-name">Small straight</span>
+                            <span class="option-score"></span>
+                        </label>
+                    </div>
+                    <div class="option-item" data-option="large-straight">
+                        <input type="radio" name="score-options" id="large-straight" class="option-input" value="large-straight" disabled />
+                        <label for="large-straight" class="option-label">
+                            <span class="option-name">Large straight</span>
+                            <span class="option-score"></span>
+                        </label>
+                    </div>
+                    <div class="option-item" data-option="none">
+                        <input type="radio" name="score-options" id="none" class="option-input" value="none" disabled />
+                        <label for="none" class="option-label">
+                            <span class="option-name">None of the above</span>
+                            <span class="option-score">0</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="terminal-btn primary" id="roll-dice-btn">
+                    <span class="btn-text">ROLL_DICE</span>
+                    <span style="color: var(--text-dim); font-size: 0.8em; margin-left: 8px;">[3_rolls_per_round]</span>
+                </button>
+                <button class="terminal-btn" id="keep-score-btn">
+                    <span class="btn-text">KEEP_SCORE</span>
+                </button>
+                <button class="terminal-btn" id="new-game-btn">
+                    <span class="btn-text">NEW_GAME</span>
+                </button>
+            </div>
+
+            <!-- Score History -->
+            <div class="score-history">
+                <div class="history-header">
+                    <span class="history-title">SCORE_HISTORY</span>
+                    <span class="output-status">LIVE</span>
+                </div>
+                <div class="history-content">
+                    <ol class="history-list" id="score-history"></ol>
+                </div>
+            </div>
+
+            <!-- Rules Panel -->
+            <div class="rules-panel">
+                <div class="rules-header" id="rules-btn">
+                    <span class="rules-title">GAME_RULES</span>
+                    <span style="color: var(--text-dim); font-size: 0.8em;">[click_to_toggle]</span>
+                </div>
+                <div class="rules-content hide" id="rules-content">
+                    <ul class="rules-list">
+                        <li class="rules-item">There are total of six rounds</li>
+                        <li class="rules-item">You can only roll the dice three times per round</li>
+                        <li class="rules-item">To start the game, roll the dice</li>
+                        <li class="rules-item">Then, choose from one of the selected scores or roll the dice again</li>
+                        <li class="rules-item">If you choose a selected score, then you will move to the next round</li>
+                        <li class="rules-item">If you decline to choose a selected score, then you can roll the dice again two more times</li>
+                    </ul>
+                    
+                    <div class="points-title">SCORING_SYSTEM</div>
+                    <div class="points-grid">
+                        <div class="point-item">
+                            <div class="point-name">Three of a kind</div>
+                            <div class="point-desc">Sum of all five dice</div>
+                        </div>
+                        <div class="point-item">
+                            <div class="point-name">Four of a kind</div>
+                            <div class="point-desc">Sum of all five dice</div>
+                        </div>
+                        <div class="point-item">
+                            <div class="point-name">Full house</div>
+                            <div class="point-desc">Three of a kind and a pair - 25 points</div>
+                        </div>
+                        <div class="point-item">
+                            <div class="point-name">Small straight</div>
+                            <div class="point-desc">Four consecutive values - 30 points</div>
+                        </div>
+                        <div class="point-item">
+                            <div class="point-name">Large straight</div>
+                            <div class="point-desc">Five consecutive values - 40 points</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="terminal-footer">
+            <div class="footer-stats">
+                <span class="stat">STATUS: <span id="footer-status">READY</span></span>
+                <span class="stat">HELD_DICE: <span id="held-count">0</span></span>
+                <span class="stat">BEST_SCORE: <span id="best-score">0</span></span>
+            </div>
+        </footer>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
