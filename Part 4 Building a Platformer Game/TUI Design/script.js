@@ -306,10 +306,12 @@ const checkpoints = [
 
 const goal = new Goal(4800, 280);
 
-// Input handling
+// Input handling - SIMPLIFIED to prevent conflicts
 const keys = {
     ArrowLeft: false,
-    ArrowRight: false
+    ArrowRight: false,
+    ArrowUp: false,
+    " ": false
 };
 
 function handleCollisions() {
@@ -380,6 +382,8 @@ function handleMovement() {
     } else {
         player.velocity.x = 0;
     }
+    
+    // Handle jumping separately in the game loop, not in key events
 }
 
 function drawBackground() {
@@ -416,6 +420,13 @@ function drawUI() {
     }
 }
 
+function handleJump() {
+    // Handle jumping in the game loop to prevent key conflict issues
+    if ((keys[" "] || keys.ArrowUp) && player.canJump && !player.frozen) {
+        player.jump();
+    }
+}
+
 function animate() {
     if (!gameStarted) return;
     
@@ -428,6 +439,7 @@ function animate() {
     goal.draw();
     
     handleMovement();
+    handleJump(); // Handle jumping in game loop instead of key events
     
     // Only handle collisions if game is active
     if (isCheckpointCollisionDetectionActive) {
@@ -473,6 +485,8 @@ function startGame() {
     
     keys.ArrowLeft = false;
     keys.ArrowRight = false;
+    keys.ArrowUp = false;
+    keys[" "] = false;
     
     canvas.width = gameContainer.clientWidth - 40;
     canvas.height = 400;
@@ -503,34 +517,30 @@ function resetGame() {
     
     keys.ArrowLeft = false;
     keys.ArrowRight = false;
+    keys.ArrowUp = false;
+    keys[" "] = false;
     
     // Restart the game loop
     animate();
 }
 
-// Event Listeners
+// Event Listeners - SIMPLIFIED: Just track key states, no jump logic here
 startBtn.addEventListener("click", startGame);
 
 window.addEventListener("keydown", (event) => {
-    // Prevent default only for specific keys to avoid jump reset
-    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-        event.preventDefault();
-    }
-    
+    // Track key states without preventing default (except for spacebar)
     if (event.key === 'ArrowLeft') {
         keys.ArrowLeft = true;
     } else if (event.key === 'ArrowRight') {
         keys.ArrowRight = true;
-    }
-    else if (event.key === ' ' || event.key === 'ArrowUp') {
-        player.jump();
-        event.preventDefault();
-    }
-    else if (event.key === 'r' || event.key === 'R') {
-        resetGame(); // Now restarts the game instead of exiting
-        event.preventDefault();
-    }
-    else if (event.key === 'Escape') {
+    } else if (event.key === 'ArrowUp') {
+        keys.ArrowUp = true;
+    } else if (event.key === ' ') {
+        keys[" "] = true;
+        event.preventDefault(); // Only prevent default for spacebar to avoid page scrolling
+    } else if (event.key === 'r' || event.key === 'R') {
+        resetGame();
+    } else if (event.key === 'Escape') {
         // Escape still exits to menu
         cancelAnimationFrame(animationId);
         gameStarted = false;
@@ -538,7 +548,6 @@ window.addEventListener("keydown", (event) => {
         gameContainer.style.display = "none";
         footerMode.textContent = "READY";
         gameStatus.textContent = "READY";
-        event.preventDefault();
     }
 });
 
@@ -547,7 +556,16 @@ window.addEventListener("keyup", (event) => {
         keys.ArrowLeft = false;
     } else if (event.key === 'ArrowRight') {
         keys.ArrowRight = false;
+    } else if (event.key === 'ArrowUp') {
+        keys.ArrowUp = false;
+    } else if (event.key === ' ') {
+        keys[" "] = false;
     }
+});
+
+// Also prevent context menu on right click
+canvas.addEventListener('contextmenu', (event) => {
+    event.preventDefault();
 });
 
 window.addEventListener("resize", () => {
