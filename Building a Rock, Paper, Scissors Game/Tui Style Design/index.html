@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPS_TERMINAL</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal">
+        <header class="terminal-header">
+            <div class="window-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="title-bar">
+                <span class="prompt">></span>
+                <span class="title">RPS_TERMINAL</span>
+                <span class="cursor">_</span>
+            </div>
+        </header>
+
+        <main class="terminal-body">
+            <div class="app-header">
+                <h1 class="app-title">~/games/rock_paper_scissors</h1>
+                <div class="status-bar">
+                    <span class="status-item" id="connection-status">ONLINE</span>
+                    <span class="status-item">v2.1.0</span>
+                    <span class="status-item">GAME_ACTIVE</span>
+                </div>
+            </div>
+
+            <div class="game-container">
+                <!-- Score Board -->
+                <div class="score-container">
+                    <div class="score-panel player-score">
+                        <div class="score-label">PLAYER</div>
+                        <div class="score-value" id="player-score">0</div>
+                        <div class="score-icon">👤</div>
+                    </div>
+                    <div class="vs-divider">VS</div>
+                    <div class="score-panel computer-score">
+                        <div class="score-label">COMPUTER</div>
+                        <div class="score-value" id="computer-score">0</div>
+                        <div class="score-icon">💻</div>
+                    </div>
+                </div>
+
+                <!-- Battle Display -->
+                <div class="battle-container">
+                    <div class="choice-display">
+                        <div class="choice-panel player-choice" id="player-choice">
+                            <div class="choice-icon">?</div>
+                            <div class="choice-label">YOUR_CHOICE</div>
+                        </div>
+                        <div class="battle-vs">VS</div>
+                        <div class="choice-panel computer-choice" id="computer-choice">
+                            <div class="choice-icon">?</div>
+                            <div class="choice-label">COMPUTER</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Display -->
+                <div class="results-container">
+                    <div class="result-text" id="results-msg">AWAITING_PLAYER_INPUT...</div>
+                    <div class="winner-text" id="winner-msg"></div>
+                </div>
+
+                <!-- Controls -->
+                <div class="controls-container">
+                    <div class="controls-label">SELECT_WEAPON:</div>
+                    <div class="weapons-grid">
+                        <button class="weapon-btn rock-btn" id="rock-btn" data-choice="Rock">
+                            <span class="weapon-icon">🗿</span>
+                            <span class="weapon-text">ROCK [R]</span>
+                        </button>
+                        <button class="weapon-btn paper-btn" id="paper-btn" data-choice="Paper">
+                            <span class="weapon-icon">📄</span>
+                            <span class="weapon-text">PAPER [P]</span>
+                        </button>
+                        <button class="weapon-btn scissors-btn" id="scissors-btn" data-choice="Scissors">
+                            <span class="weapon-icon">✂️</span>
+                            <span class="weapon-text">SCISSORS [S]</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Game Info -->
+                <div class="info-container">
+                    <div class="info-panel">
+                        <div class="info-label">GAME_RULES:</div>
+                        <div class="rules-list">
+                            <div class="rule-item">🗿 ROCK > ✂️ SCISSORS</div>
+                            <div class="rule-item">✂️ SCISSORS > 📄 PAPER</div>
+                            <div class="rule-item">📄 PAPER > 🗿 ROCK</div>
+                            <div class="rule-item">FIRST_TO_3_POINTS_WINS</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reset Button -->
+                <div class="reset-container">
+                    <button class="reset-btn" id="reset-game-btn">
+                        <span class="reset-icon">🔄</span>
+                        <span class="reset-text">RESTART_GAME</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="terminal-footer">
+            <div class="footer-stats">
+                <span class="stat">STATUS: <span id="status">READY</span></span>
+                <span class="stat">ROUNDS_PLAYED: <span id="rounds-played">0</span></span>
+                <span class="stat">THEME: CYBERPUNK</span>
+            </div>
+        </footer>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
