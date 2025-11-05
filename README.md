@@ -82,7 +82,7 @@ Through this course, I learned:
 | 🧱 Course Project Part 4 | 💡 Description | 🌐 Live Demo | 📊 Status |
 |--------------------------|----------------|--------------|-----------|
 | 🛒 [**Shopping Cart**](https://github.com/acheronx0577/JavaScript-Building-a-Shopping-Cart) | Learn Basic OOP by Building a Shopping Cart | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Shopping-Cart) | ✅Completed |
-| 🎮 [**Platformer Game**](https://github.com/yourusername/JavaScript-Building-a-Platformer-Game) | Learn Intermediate OOP by Building a Platformer Game | ▶️ [Link](https://yourusername.github.io/JavaScript-Building-a-Platformer-Game) | 🔄 In Progress |
+| 🎮 [**Platformer Game**](https://github.com/acheronx0577/JavaScript-Building-a-Platformer-Game) | Learn Intermediate OOP by Building a Platformer Game | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Platformer-Game) | ✅Completed |
 | 🎲 [**Dice Game**](https://github.com/acheronx0577/JavaScript-Building-a-Dice-Game) | Review Algorithmic Thinking by Building a Dice Game | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-a-Dice-Game) | ✅Completed |
 | 💰 [**Cash Register (Certification Project)**](https://github.com/acheronx0577/JavaScript-Build-a-Cash-Register-Project) | **Certification Project**: Build a Cash Register Web App | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Build-a-Cash-Register-Project) | ✅Completed |
 
