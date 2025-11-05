@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PALINDROME_TERMINAL</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal">
+        <header class="terminal-header">
+            <div class="window-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="title-bar">
+                <span class="prompt">$</span>
+                <span class="title">PALINDROME_TERMINAL</span>
+                <span class="cursor">_</span>
+            </div>
+        </header>
+
+        <main class="terminal-body">
+            <div class="app-header">
+                <h1 class="app-title">~/text_analysis/palindrome_checker</h1>
+                <div class="status-bar">
+                    <span class="status-item">ONLINE</span>
+                    <span class="status-item">v2.1.3</span>
+                    <span class="status-item">UTF-8</span>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="text-input" class="input-label">
+                        <span class="label-text">INPUT_TEXT</span>
+                        <span class="label-desc">[string_analysis]</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="text-input"
+                        class="terminal-input"
+                        placeholder="Enter text to analyze..."
+                        autocomplete="off"
+                    />
+                </div>
+
+                <button id="check-btn" class="terminal-btn primary">
+                    <span class="btn-text">[ANALYZE_PALINDROME]</span>
+                </button>
+            </div>
+
+            <div id="output" class="output-panel hide">
+                <div class="output-header">
+                    <span class="output-title">ANALYSIS_REPORT</span>
+                    <span class="output-status">PROCESSING</span>
+                </div>
+                <div class="output-content">
+                    <div id="result" class="result-content"></div>
+                </div>
+            </div>
+
+            <div class="info-panel">
+                <div class="info-header">
+                    <span class="info-title">PALINDROME_EXAMPLES</span>
+                </div>
+                <div class="info-content">
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <span class="example-text">"racecar"</span>
+                            <span class="example-status valid">VALID</span>
+                        </div>
+                        <div class="example-item">
+                            <span class="example-text">"A man, a plan, a canal: Panama"</span>
+                            <span class="example-status valid">VALID</span>
+                        </div>
+                        <div class="example-item">
+                            <span class="example-text">"Never odd or even"</span>
+                            <span class="example-status valid">VALID</span>
+                        </div>
+                        <div class="example-item">
+                            <span class="example-text">"0_0 (: /-\ :) 0-0"</span>
+                            <span class="example-status valid">VALID</span>
+                        </div>
+                        <div class="example-item">
+                            <span class="example-text">"hello world"</span>
+                            <span class="example-status invalid">INVALID</span>
+                        </div>
+                        <div class="example-item">
+                            <span class="example-text">"python"</span>
+                            <span class="example-status invalid">INVALID</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="terminal-footer">
+            <div class="footer-stats">
+                <span class="stat">STATUS: READY</span>
+                <span class="stat">CHARS: <span id="char-count">0</span></span>
+                <span class="stat">MODE: CASE_INSENSITIVE</span>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
