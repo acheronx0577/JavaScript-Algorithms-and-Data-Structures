@@ -88,6 +88,14 @@ Through this course, I learned:
 
 ---
 
+| 🧱 Course Project Part 5 | 💡 Description | 🌐 Live Demo | 📊 Status |
+|--------------------------|----------------|--------------|-----------|
+| 📝 [**ICC Authors Page**](https://github.com/acheronx0577/JavaScript-Building-an-ICC-Authors-Page) | Learn Fetch and Promises by Building an ICC Authors Page | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-an-ICC-Authors-Page) | ✅Completed |
+| 🏆 [**ICC Forum Leaderboard**](https://github.com/acheronx0577/JavaScript-Building-an-ICC-Forum-Leaderboard) | Learn Asynchronous Programming by Building an ICC Forum Leaderboard | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Building-an-ICC-Forum-Leaderboard) | ⏳ In Progress |
+| 🎮 [**RPG Creature Search App**](https://github.com/acheronx0577/JavaScript-Build-an-RPG-Creature-Search-App-Project) | **Certification Project**: Build an RPG Creature Search App | ▶️ [Link](https://acheronx0577.github.io/JavaScript-Build-an-RPG-Creature-Search-App-Project) | ✅Completed |
+
+---
+
 ## 🧰 Tech Stack
 
 - 🟨 JavaScript (ES6+)
