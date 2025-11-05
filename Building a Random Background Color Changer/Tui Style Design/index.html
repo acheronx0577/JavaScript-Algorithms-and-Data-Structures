@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" />
+    <title>COLOR_TERMINAL</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal">
+        <header class="terminal-header">
+            <div class="window-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="title-bar">
+                <span class="prompt">></span>
+                <span class="title">COLOR_TERMINAL</span>
+                <span class="cursor">_</span>
+            </div>
+        </header>
+
+        <main class="terminal-body">
+            <div class="app-header">
+                <h1 class="app-title">~/tools/color_generator</h1>
+                <div class="status-bar">
+                    <span class="status-item" id="connection-status">ONLINE</span>
+                    <span class="status-item">v2.1.0</span>
+                    <span class="status-item">READY</span>
+                </div>
+            </div>
+
+            <div class="color-container">
+                <div class="color-display" id="color-display">
+                    <div class="color-preview" id="color-preview"></div>
+                    <div class="color-info">
+                        <div class="color-hex" id="bg-hex-code">#110815</div>
+                        <div class="color-rgb" id="color-rgb">rgb(17, 8, 21)</div>
+                    </div>
+                </div>
+
+                <div class="controls-panel">
+                    <button class="control-btn primary" id="btn">
+                        <span class="btn-text">GENERATE_COLOR</span>
+                        <span class="btn-shortcut">[ENTER]</span>
+                    </button>
+                    <button class="control-btn secondary" id="copy-btn">
+                        <span class="btn-text">COPY_HEX</span>
+                        <span class="btn-shortcut">[C]</span>
+                    </button>
+                    <button class="control-btn accent" id="lock-btn">
+                        <span class="btn-text">LOCK_COLOR</span>
+                        <span class="btn-shortcut">[L]</span>
+                    </button>
+                </div>
+
+                <div class="history-container">
+                    <div class="history-label">COLOR_HISTORY</div>
+                    <div class="history-items" id="color-history"></div>
+                </div>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-label">TOTAL_GENERATED:</span>
+                        <span class="stat-value" id="total-generated">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">LAST_ACTION:</span>
+                        <span class="stat-value" id="last-action">READY</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="terminal-footer">
+            <div class="footer-stats">
+                <span class="stat">STATUS: <span id="status">AWAITING_INPUT</span></span>
+                <span class="stat">COLORS_AVAILABLE: <span id="colors-available">10</span></span>
+                <span class="stat">THEME: TERMINAL_V2</span>
+            </div>
+        </footer>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
