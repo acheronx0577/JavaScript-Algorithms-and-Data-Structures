@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>DRAGON_REPELLER_TERMINAL</title>
+</head>
+<body>
+    <div class="terminal">
+        <header class="terminal-header">
+            <div class="window-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="title-bar">
+                <span class="prompt">></span>
+                <span class="title">DRAGON_REPELLER_TERMINAL</span>
+                <span class="cursor">_</span>
+            </div>
+        </header>
+
+        <main class="terminal-body">
+            <div class="app-header">
+                <h1 class="app-title">~/rpg/dragon_repeller</h1>
+                <div class="status-bar">
+                    <span class="status-item" id="connection-status">ONLINE</span>
+                    <span class="status-item">v2.1.0</span>
+                    <span class="status-item">GAME_ACTIVE</span>
+                </div>
+            </div>
+
+            <div class="game-container">
+                <!-- Stats Panel -->
+                <div class="stats-container">
+                    <div class="stat-line">
+                        <span class="stat-label">XP:</span>
+                        <span class="stat-value" id="xpText">0</span>
+                        <span class="stat-icon">⚡</span>
+                    </div>
+                    <div class="stat-line">
+                        <span class="stat-label">HEALTH:</span>
+                        <span class="stat-value" id="healthText">100</span>
+                        <span class="stat-icon">❤️</span>
+                    </div>
+                    <div class="stat-line">
+                        <span class="stat-label">GOLD:</span>
+                        <span class="stat-value" id="goldText">50</span>
+                        <span class="stat-icon">💰</span>
+                    </div>
+                </div>
+
+                <!-- Health Bars -->
+                <div class="health-display">
+                    <div class="health-bar-container">
+                        <div class="health-bar-label">PLAYER_HEALTH</div>
+                        <div class="health-bar">
+                            <div class="health-fill" id="playerHealthBar"></div>
+                            <span class="health-text" id="playerHealthText">100/100</span>
+                        </div>
+                    </div>
+                    <div class="health-bar-container monster-health" id="monsterStats">
+                        <div class="health-bar-label" id="monsterName">MONSTER</div>
+                        <div class="health-bar">
+                            <div class="health-fill monster" id="monsterHealthBar"></div>
+                            <span class="health-text" id="monsterHealth">0/0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inventory -->
+                <div class="inventory-container">
+                    <div class="inventory-label">INVENTORY</div>
+                    <div class="inventory-items" id="inventoryDisplay">
+                        <div class="inventory-item active">stick</div>
+                    </div>
+                </div>
+
+                <!-- Game Text -->
+                <div class="game-text-container">
+                    <div id="text" class="game-text">
+                        Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons below.
+                    </div>
+                </div>
+
+                <!-- Location Indicator -->
+                <div class="location-container">
+                    <span class="location-label">CURRENT_LOCATION:</span>
+                    <span id="locationText" class="location-value">TOWN_SQUARE</span>
+                </div>
+
+                <!-- Controls -->
+                <div class="controls-container">
+                    <button id="button1" class="control-btn primary">Go to store</button>
+                    <button id="button2" class="control-btn secondary">Go to cave</button>
+                    <button id="button3" class="control-btn danger">Fight dragon</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="terminal-footer">
+            <div class="footer-stats">
+                <span class="stat">STATUS: <span id="status">READY</span></span>
+                <span class="stat">WEAPON_POWER: <span id="weaponPower">5</span></span>
+                <span class="stat">THEME: TERMINAL_V2</span>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
