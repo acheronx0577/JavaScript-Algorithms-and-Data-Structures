@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>TERMINAL_DATE_FORMATTER</title>
+</head>
+<body>
+    <div class="terminal">
+        <header class="terminal-header">
+            <div class="window-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="title-bar">
+                <span class="prompt">></span>
+                <span class="title">TERMINAL_DATE_FORMATTER</span>
+                <span class="cursor">_</span>
+            </div>
+        </header>
+
+        <main class="terminal-body">
+            <div class="app-header">
+                <h1 class="app-title">~/utils/date_formatter</h1>
+                <div class="status-bar">
+                    <span class="status-item">ACTIVE</span>
+                    <span class="status-item">v2.1.0</span>
+                    <span class="status-item">UTC+0</span>
+                </div>
+            </div>
+
+            <!-- Main Date Display -->
+            <div class="date-display-section">
+                <div class="section-title">
+                    <span>CURRENT_DATE_TIME</span>
+                    <span style="color: var(--text-dim); font-size: 0.8em;">[live_update]</span>
+                </div>
+                <div class="date-container">
+                    <div class="date-card">
+                        <div class="date-header">
+                            <i class="fas fa-terminal"></i>
+                            <span>SYSTEM_TIME</span>
+                        </div>
+                        <div id="current-date" class="formatted-date">INITIALIZING...</div>
+                        <div class="date-footer">
+                            <i class="fas fa-sync-alt"></i>
+                            <span>UPDATING_EVERY_SECOND</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Format Controls -->
+            <div class="format-controls">
+                <div class="section-title">DATE_FORMAT_OPTIONS</div>
+                <div class="controls-grid">
+                    <div class="control-group">
+                        <label for="date-options" class="control-label">
+                            <i class="fas fa-code"></i> FORMAT_TYPE
+                        </label>
+                        <select name="date-options" id="date-options" class="terminal-select">
+                            <option value="dd-mm-yyyy">DD-MM-YYYY</option>
+                            <option value="yyyy-mm-dd">YYYY-MM-DD</option>
+                            <option value="mm-dd-yyyy-h-mm">MM-DD-YYYY HH:MM AM/PM</option>
+                            <option value="mm-dd-yyyy-h-mm-ss">MM-DD-YYYY HH:MM:SS AM/PM</option>
+                            <option value="full-date">FULL_DATE</option>
+                            <option value="full-date-time">FULL_DATE_WITH_TIME</option>
+                            <option value="relative">RELATIVE_TIME</option>
+                            <option value="unix">UNIX_TIMESTAMP</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="timezone-select" class="control-label">
+                            <i class="fas fa-globe"></i> TIMEZONE
+                        </label>
+                        <select name="timezone-select" id="timezone-select" class="terminal-select">
+                            <option value="auto">Auto (System)</option>
+                            <option value="UTC">UTC</option>
+                            <option value="America/New_York">EST (Eastern)</option>
+                            <option value="America/Chicago">CST (Central)</option>
+                            <option value="America/Denver">MST (Mountain)</option>
+                            <option value="America/Los_Angeles">PST (Pacific)</option>
+                            <option value="Europe/London">GMT (London)</option>
+                            <option value="Europe/Paris">CET (Paris)</option>
+                            <option value="Asia/Tokyo">JST (Tokyo)</option>
+                            <option value="Asia/Shanghai">CST (China)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Time Info -->
+            <div class="timezone-info">
+                <div class="section-title">TIME_INFORMATION</div>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-label">YOUR_TIMEZONE</div>
+                        <div class="info-value" id="timezone">Detecting...</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">UNIX_TIMESTAMP</div>
+                        <div class="info-value" id="timestamp">0</div>
+                        <div class="info-desc">Seconds since Jan 1, 1970</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">DAY_OF_YEAR</div>
+                        <div class="info-value" id="day-of-year">0</div>
+                        <div class="info-desc">Day 1-365</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">WEEK_NUMBER</div>
+                        <div class="info-value" id="week-number">0</div>
+                        <div class="info-desc">Week 1-52</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="action-buttons">
+                <button class="terminal-btn primary" id="copy-date-btn">
+                    <i class="fas fa-copy"></i>
+                    <span class="btn-text">COPY_TO_CLIPBOARD</span>
+                </button>
+                <button class="terminal-btn" id="refresh-btn">
+                    <i class="fas fa-redo"></i>
+                    <span class="btn-text">REFRESH</span>
+                </button>
+                <button class="terminal-btn" id="theme-toggle">
+                    <i class="fas fa-palette"></i>
+                    <span class="btn-text">TOGGLE_THEME</span>
+                </button>
+            </div>
+
+            <!-- Format History -->
+            <div class="format-history">
+                <div class="history-header">
+                    <span class="history-title">FORMAT_HISTORY</span>
+                    <span class="output-status">LIVE</span>
+                </div>
+                <div class="history-content">
+                    <ol class="history-list" id="format-history"></ol>
+                </div>
+            </div>
+        </main>
+
+        <footer class="terminal-footer">
+            <div class="footer-stats">
+                <span class="stat">STATUS: <span id="footer-status">READY</span></span>
+                <span class="stat">UPTIME: <span id="uptime">00:00:00</span></span>
+                <span class="stat">FORMATS_USED: <span id="formats-used">0</span></span>
+            </div>
+        </footer>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
