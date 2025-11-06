@@ -133,7 +133,7 @@ open index.html
 
 ## 🏁 Certification Progress
 
-✅ **3 / 5 Projects Certification Completed**  
+✅ **5 / 5 Projects Certification Completed**  
 ⭐ Continuing toward full certification!
 
 ---
