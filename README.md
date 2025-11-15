@@ -19,7 +19,7 @@ This project was completed as part of the freeCodeCamp certification requirement
 
 If you’re new to JavaScript or working on the same certification, follow these steps 👇  
 
-1. 🌐 **Go to the FreeCodeCamp course page** above.  
+1. 🌐 **Go to the FreeCodeCamp course page** above!  
 2. 📋 **Read the project requirements** for each section or mini-project.  
 3. 💻 **Check my code in this repository** to see how I solved it.  
 4. 🔍 **Compare your code with mine** to understand different approaches.  
