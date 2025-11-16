@@ -149,7 +149,7 @@ Want to improve this project?
 
 ## 📜 License
 
-This project is open-source under the **MIT License**.
+This project is open-source under the **MIT License**!
 
 ---
 ⭐ **If you like this project, give it a star on GitHub!** ⭐
