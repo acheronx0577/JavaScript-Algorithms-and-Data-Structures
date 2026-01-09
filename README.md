@@ -1,6 +1,6 @@
 # 🧠 JavaScript Algorithms and Data Structures 💻
 
-Welcome to my **JavaScript Algorithms and Data Structures** certification projects!  
+Welcome to my **JavaScript Algorithms and Data Structures** certification project.  
 Each project builds on core JavaScript concepts - from variables and loops to OOP, functional programming, and algorithmic problem-solving!
 
 ---
